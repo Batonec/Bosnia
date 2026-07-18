@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "trip-site-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "-d", "/private/tmp/claude-501/-Users-batonec-AndroidStudioProjects-Bosnia/0da8a200-9841-4d9d-966d-0c5ad2de3293/scratchpad/site"],
+      "port": 8765
+    }
+  ]
+}

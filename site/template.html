@@ -1,0 +1,453 @@
+<meta charset="utf-8">
+<title>Босния — 9 дней</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ground:#F2F1EA; --card:#FAF9F3; --ink:#23271E; --muted:#6F7268;
+    --line:#DCDBCE; --accent:#0E7A60; --accent-soft:#E2EFE9;
+    --copper:#A85B22; --copper-soft:#F3E6D8;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ground:#151813; --card:#1D211B; --ink:#E9E7DB; --muted:#9B9E90;
+      --line:#2F342B; --accent:#46C29E; --accent-soft:#1E3129;
+      --copper:#D9905A; --copper-soft:#33261B; }
+  }
+  :root[data-theme="dark"]{ --ground:#151813; --card:#1D211B; --ink:#E9E7DB; --muted:#9B9E90;
+    --line:#2F342B; --accent:#46C29E; --accent-soft:#1E3129;
+    --copper:#D9905A; --copper-soft:#33261B; }
+  :root[data-theme="light"]{ --ground:#F2F1EA; --card:#FAF9F3; --ink:#23271E; --muted:#6F7268;
+    --line:#DCDBCE; --accent:#0E7A60; --accent-soft:#E2EFE9;
+    --copper:#A85B22; --copper-soft:#F3E6D8; }
+
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+  body{background:var(--ground); color:var(--ink); font-family:var(--sans);
+    line-height:1.55; margin:0; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:740px; margin:0 auto; padding:0 20px 80px;}
+
+  /* hero */
+  .hero{position:relative; border-radius:14px; overflow:hidden; margin-top:20px;}
+  .hero img{display:block; width:100%; height:340px; object-fit:cover;}
+  .hero .shade{position:absolute; inset:0; background:linear-gradient(to top, rgba(12,16,12,.78), rgba(12,16,12,.05) 60%);}
+  .hero .txt{position:absolute; left:24px; right:24px; bottom:22px; color:#F4F2E8;}
+  .hero .eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.85;}
+  .hero h1{font-family:var(--serif); font-size:clamp(30px,6vw,44px); margin:.15em 0 .2em; text-wrap:balance; line-height:1.08;}
+  .hero p{margin:0; font-size:15px; opacity:.9; max-width:52ch;}
+
+  h2{font-family:var(--serif); font-size:26px; margin:52px 0 6px; text-wrap:balance;}
+  .sub{color:var(--muted); font-size:14.5px; margin:0 0 20px; max-width:62ch;}
+
+  /* route grid */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:12px;}
+  .dcard{display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:14px 16px; text-decoration:none; color:var(--ink); transition:border-color .15s;}
+  .dcard:hover{border-color:var(--accent);}
+  .dcard:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .dcard .n{font-family:var(--serif); font-size:13px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase;}
+  .dcard .t{font-weight:600; font-size:15.5px; margin:2px 0 8px; line-height:1.3;}
+  .chips{display:flex; flex-wrap:wrap; gap:6px;}
+  .chip{display:inline-flex; align-items:center; gap:6px; font-size:12px; border-radius:999px;
+    padding:2.5px 10px; border:1px solid var(--line); color:var(--muted); white-space:nowrap;
+    font-variant-numeric:tabular-nums;}
+  .chip::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--muted); flex:none;}
+  .chip.act{border-color:var(--copper); color:var(--copper); background:var(--copper-soft);}
+  .chip.act::before{background:var(--copper);}
+  .chip.chill{border-color:var(--accent); color:var(--accent); background:var(--accent-soft);}
+  .chip.chill::before{background:var(--accent);}
+  .chip.road{}
+  .chip.zero{border-style:dashed;}
+
+  /* map */
+  .mapbox{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px; overflow:hidden;}
+  .mapbox svg text{font-family:var(--sans);}
+
+  /* day sections */
+  .day{margin-top:64px; scroll-margin-top:20px;}
+  .day .eyebrow{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600;}
+  .day h3{font-family:var(--serif); font-size:clamp(22px,4vw,30px); margin:.2em 0 .35em; line-height:1.15; text-wrap:balance;}
+  .day .lede{font-size:16px; color:var(--ink); margin:14px 0 0; max-width:62ch;}
+  .day .lede em{color:var(--muted); font-style:normal;}
+
+  /* carousel */
+  .car{position:relative; margin:22px 0 8px;}
+  .car .track{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; border-radius:12px;
+    scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+  .car .track::-webkit-scrollbar{display:none}
+  .car figure{flex:0 0 100%; margin:0; scroll-snap-align:center; position:relative;}
+  .car img{display:block; width:100%; height:min(56vw,420px); object-fit:cover;}
+  .car figcaption{position:absolute; left:0; right:0; bottom:0; padding:26px 16px 10px; color:#F2F0E6;
+    font-size:13px; background:linear-gradient(to top, rgba(10,14,10,.75), transparent);}
+  .car .btn{position:absolute; top:calc(50% - 34px); width:38px; height:38px; border-radius:50%;
+    border:none; background:rgba(20,24,19,.55); color:#F2F0E6; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;}
+  .car .btn:hover{background:rgba(20,24,19,.8)}
+  .car .btn:focus-visible{outline:2px solid #fff}
+  .car .prev{left:10px} .car .next{right:10px}
+  .dots{display:flex; gap:6px; justify-content:center; margin-top:10px;}
+  .dots button{width:8px; height:8px; border-radius:50%; border:none; background:var(--line); cursor:pointer; padding:0;}
+  .dots button.on{background:var(--accent);}
+  .dots button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  /* plan list */
+  .plan{list-style:none; margin:18px 0 0; padding:0; border-top:1px solid var(--line);}
+  .plan li{display:flex; gap:14px; padding:9px 2px; border-bottom:1px solid var(--line); font-size:14.5px;}
+  .plan .tm{flex:0 0 92px; color:var(--accent); font-variant-numeric:tabular-nums; font-weight:600; font-size:13.5px; padding-top:1px;}
+  .plan .free{color:var(--muted); font-weight:500;}
+
+  .note{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--copper);
+    border-radius:10px; padding:12px 16px; margin-top:18px; font-size:14px;}
+  .note b{color:var(--copper);}
+  .note ul{margin:6px 0 0; padding-left:18px;} .note li{margin:3px 0;}
+
+  /* practical */
+  .pr{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin-top:14px;}
+  .pr h4{margin:0 0 10px; font-size:15px;}
+  .pr ul{margin:0; padding-left:18px; font-size:14px;} .pr li{margin:4px 0;}
+  .pr .sum{font-variant-numeric:tabular-nums;}
+  .foot{margin-top:60px; color:var(--muted); font-size:12.5px; border-top:1px solid var(--line); padding-top:14px;}
+  a{color:var(--accent);}
+</style>
+
+<div class="wrap">
+  <div class="hero">
+    <img src="{{panorama}}" alt="Панорама Сараево в чаше гор">
+    <div class="shade"></div>
+    <div class="txt">
+      <div class="eyebrow">Начало августа 2026 · вдвоём · машина + поезд</div>
+      <h1>Босния: 9 дней по-настоящему</h1>
+      <p>Полёт над Сараево, квадры вокруг каньона, две ночи в самой высокогорной деревне Балкан, секретный бункер Тито и Мостар на поезде. Ноль автобусных экскурсий.</p>
+    </div>
+  </div>
+
+  <h2>Маршрут по дням</h2>
+  <p class="sub">Карточка — краткая суть; клик ведёт к полному дню. Метки: медная — экшен, зелёная — природа и чилл, серая — дорога.</p>
+  <div class="grid">
+    <a class="dcard" href="#d1"><div class="n">День 1</div><div class="t">Белград → Вишеград → Сараево</div>
+      <div class="chips"><span class="chip road">5.5 ч руля</span><span class="chip chill">Дрвенград · мост ЮНЕСКО</span></div></a>
+    <a class="dcard" href="#d2"><div class="n">День 2</div><div class="t">Бувляк, кофе-ритуал и параглайдинг</div>
+      <div class="chips"><span class="chip act">полёт над городом</span><span class="chip road zero">0 руля</span></div></a>
+    <a class="dcard" href="#d3"><div class="n">День 3</div><div class="t">Сараево глубоко: осада, медник, бобслей</div>
+      <div class="chips"><span class="chip act">чеканишь джезву</span><span class="chip chill">хамам</span><span class="chip road zero">0 руля</span></div></a>
+    <a class="dcard" href="#d4"><div class="n">День 4</div><div class="t">Плато → Умоляни → ночь в Лукомире</div>
+      <div class="chips"><span class="chip road">2 ч руля</span><span class="chip chill">деревни · закат над каньоном</span></div></a>
+    <a class="dcard" href="#d5"><div class="n">День 5</div><div class="t">Медитативный день в Лукомире</div>
+      <div class="chips"><span class="chip chill">книжка над обрывом</span><span class="chip road zero">0 руля · 0 чемоданов</span></div></a>
+    <a class="dcard" href="#d6"><div class="n">День 6</div><div class="t">Квадры из Коньица → Борачко озеро</div>
+      <div class="chips"><span class="chip act">private-тур 5.5 ч, сам за рулём</span><span class="chip road">1.5 ч руля</span></div></a>
+    <a class="dcard" href="#d7"><div class="n">День 7</div><div class="t">Утро на озере → бункер Тито → Сараево</div>
+      <div class="chips"><span class="chip chill">лодка/сап на зеркале</span><span class="chip act">атомный бункер</span><span class="chip road">1.5 ч руля</span></div></a>
+    <a class="dcard" href="#d8"><div class="n">День 8</div><div class="t">Мостар одним днём на поезде</div>
+      <div class="chips"><span class="chip chill">каньон из окна · Благай</span><span class="chip road zero">поезд · 0 руля</span></div></a>
+    <a class="dcard" href="#d9"><div class="n">День 9</div><div class="t">Перегон домой</div>
+      <div class="chips"><span class="chip road">5.5 ч руля</span></div></a>
+  </div>
+
+  <h2>Карта маршрута</h2>
+  <p class="sub">Кольцо по часовой: на юг через Вишеград, горная петля Лукомир—Коньиц—озеро, возврат в Сараево, Мостар — поездом, домой — северным путём. Ромбики — погранпереходы.</p>
+  <div class="mapbox">
+MAPSVG_PLACEHOLDER
+  </div>
+
+  <!-- DAY 1 -->
+  <section class="day" id="d1">
+    <div class="eyebrow">День 1 · дорога-впечатление</div>
+    <h3>Белград → Мокра Гора → Вишеград → Сараево</h3>
+    <p class="lede">Не «доехать», а сделать дорогу первым событием: узкоколейка Шарганская восьмёрка, деревянный город Кустурицы, мост из «Моста на Дрине» Андрича и серпантины Романии. <em>Граница Котроман — маленькая и обычно свободная.</em></p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{sargan}}" alt="Станция Шарганской восьмёрки"><figcaption>Шарганская восьмёрка — ретро-узкоколейка в Мокра Горе</figcaption></figure>
+        <figure><img src="{{drvengrad}}" alt="Дрвенград"><figcaption>Дрвенград: деревня, которую Кустурица построил для фильма</figcaption></figure>
+        <figure><img src="{{visegrad}}" alt="Мост Мехмед-паши Соколовича"><figcaption>Вишеград: «Мост на Дрине», ЮНЕСКО, 1577 год</figcaption></figure>
+        <figure><img src="{{andricgrad}}" alt="Андричград"><figcaption>Андричград — каменный город на стрелке Дрины, тут обед</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">07:00</span><span>Выезд из Белграда, автомагистраль до Пожеги</span></li>
+      <li><span class="tm">10:30</span><span>Мокра Гора: Дрвенград и станция узкоколейки</span></li>
+      <li><span class="tm">12:15</span><span>Граница Котроман → Вишеград: мост, обед в Андричграде</span></li>
+      <li><span class="tm">15:00</span><span>Рогатица → плато Романия, серпантины</span></li>
+      <li><span class="tm">17:30</span><span>Сараево: заселение (Стари Град, жильё с парковкой)</span></li>
+      <li><span class="tm">19:00</span><span>Первый выход: Башчаршия, чевапи у Željo, площадь Себиль</span></li>
+    </ul>
+    <div class="note"><b>Важно:</b> водитель один — остановки это его обязательные паузы; поменять деньги на KM вечером; заправляться уже в Боснии (дешевле).</div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day" id="d2">
+    <div class="eyebrow">День 2 · первый экшен</div>
+    <h3>Бувляк на Ступе → город → вечерний параглайдинг</h3>
+    <p class="lede">Утром — воскресный блошиный рынок с торгом до потери пульса, днём — кофе-ритуал и обед «как местные», вечером — главная история: полёт в тандеме над чашей сараевских гор. <em>День 3 — погодный резерв полёта.</em></p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{sebilj}}" alt="Себиль"><figcaption>Себиль и голубиная площадь — сердце Башчаршии</figcaption></figure>
+        <figure><img src="{{kafa}}" alt="Босанска кафа"><figcaption>Босанска кафа: джезва, лукум и понятие «ćejf»</figcaption></figure>
+        <figure><img src="{{zuta}}" alt="Жёлтая крепость"><figcaption>Žuta Tabija — запасной закат, если полёт уйдёт на утро</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">09:00</span><span>Бувляк Stup (только по воскресеньям): югославский винтаж, значки, торг обязателен, только наличные</span></li>
+      <li><span class="tm">12:00</span><span>Кофе-ритуал в Čajdžinica Džirlo</span></li>
+      <li><span class="tm">13:00</span><span>Обед в ашчинице ASDŽ — брать глазами самое местное</span></li>
+      <li><span class="tm">14:00</span><span>Latin Bridge (место убийства Франца-Фердинанда) и боковые улочки Башчаршии</span></li>
+      <li><span class="tm">16:00</span><span>Параглайдинг: пикап из города, гора по ветру, полёт 15–30 мин, GoPro-видео</span></li>
+      <li><span class="tm">20:30</span><span>Ужин: Inat Kuća — дом с городской легендой</span></li>
+    </ul>
+    <div class="note"><b>Бронь:</b> Sarajevo Bosnia Tours, ~130 €/чел, WhatsApp +387 62 143 144 — просить вечерний слот с переносом по погоде.</div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day" id="d3">
+    <div class="eyebrow">День 3 · город глубоко</div>
+    <h3>Осада, медник, бобслей, хамам</h3>
+    <p class="lede">Война 90-х глазами живого свидетеля, ремесло — руками: сам чеканишь свою джезву у мастера на Казанджилуке. Вечером — заброшенная бобслейная трасса Олимпиады-84 и закат на пустой Белой крепости.</p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{bob}}" alt="Бобслейная трасса"><figcaption>Жёлоб Олимпиады-84 на Требевиче: бетон, граффити, лес</figcaption></figure>
+        <figure><img src="{{kazandziluk}}" alt="Казанджилук"><figcaption>Казанджилук: улица медников — тут твой воркшоп</figcaption></figure>
+        <figure><img src="{{tunnel}}" alt="Тоннель спасения"><figcaption>Тоннель спасения: 800 м под аэропортом — артерия города в осаду</figcaption></figure>
+        <figure><img src="{{bijela}}" alt="Белая крепость"><figcaption>Bijela Tabija — выше и пустыннее Жёлтой, закат отсюда</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">08:30</span><span>Тур с пережившим осаду (Times of Misfortune / «Veteran’s Story», ~3.5 ч)</span></li>
+      <li><span class="tm">12:00</span><span>Чевапи-дерби, раунд 2: Ferhatović или Petica</span></li>
+      <li><span class="tm">13:30</span><span>Воркшоп у медника: своя джезва под руководством казанджии (~30–45 €)</span></li>
+      <li><span class="tm">15:00</span><span>Хамам: ритуальный пакет 90–120 мин — пар, скраб, пена, масло</span></li>
+      <li><span class="tm">17:00</span><span>Канатка на Требевич → бобслейная трасса пешком по жёлобу</span></li>
+      <li><span class="tm">19:15</span><span>Закат на Белой крепости</span></li>
+      <li><span class="tm">20:45</span><span>Ужин + тёмное Sarajevsko в Pivnica HS (пивоварня, работавшая всю осаду)</span></li>
+    </ul>
+    <div class="note"><b>Вечером свериться:</b> подтвердить Лукомир (заезд завтра) и квадры Travel Konjic на день 6; снять наличные KM — дальше горы, карты не берут.</div>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="day" id="d4">
+    <div class="eyebrow">День 4 · в горы</div>
+    <h3>Плато Бьелашницы → Умоляни → ночь в Лукомире</h3>
+    <p class="lede">Самый короткий переезд поездки (~2 часа руля, размазанные на день) и самая аутентичная точка: Лукомир, 1470 м — каменные дома, пастухи, овцы. Вечером — закат над каньоном Ракитницы глубиной 800 метров.</p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{plateau}}" alt="Плато Бьелашницы"><figcaption>Плато Бьелашницы — дорога на Умоляни идёт через эти луга</figcaption></figure>
+        <figure><img src="{{studeni}}" alt="Студени поток"><figcaption>Studeni potok: меандры — главный инстаграм-кадр плато</figcaption></figure>
+        <figure><img src="{{dzamija}}" alt="Мечеть Умоляни"><figcaption>Мечеть Умоляни — нацпамятник; рядом стечки ЮНЕСКО</figcaption></figure>
+        <figure><img src="{{lukomir_v}}" alt="Лукомир"><figcaption>Лукомир: твой дом на две ночи</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">09:00</span><span>Выезд из Сараево, закупка на горы (вода, вино, снеки)</span></li>
+      <li><span class="tm">11:00</span><span>Умоляни: круговой хайк к меандрам Studeni potok</span></li>
+      <li><span class="tm">12:30</span><span>Обед: пита ~5 KM, уштипцы с каймаком, свежее молоко</span></li>
+      <li><span class="tm">13:30</span><span>Стечки Dolovi (ЮНЕСКО), мечеть, скала с «окаменевшим драконом»</span></li>
+      <li><span class="tm">15:00</span><span>Грейдер Умоляни → Лукомир (11 км, летом проходит легковушка)</span></li>
+      <li><span class="tm">16:00</span><span>Заселение на 2 ночи; деревня: овцы, носки у бабушек, разговоры</span></li>
+      <li><span class="tm">19:00</span><span>Смотровая Vidikovac: закат над каньоном. Сесть и молчать</span></li>
+      <li><span class="tm">20:30</span><span>Ужин у хозяев: сыр, каймак, пита; ночью — звёзды</span></li>
+    </ul>
+    <div class="note"><b>Важно:</b> полный бак и кэш из города — в Лукомире нет ни заправок, ни магазинов, ни банкоматов; ночью +8–12° даже в августе; интернет почти отсутствует — это фича. <b>Теферич:</b> в начале августа в сёлах бывают народные гуляния — спросить хозяев про даты, попадание = джекпот.</div>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="day" id="d5">
+    <div class="eyebrow">День 5 · медитативный</div>
+    <h3>«Кенийский» день на кромке каньона</h3>
+    <p class="lede">Единственный день без руля, чемоданов и брони по часам. Тропа вдоль кромки, плед, книжка, пастуший перекус над 800-метровым обрывом. Единица измерения дня — не километры, а часы тишины.</p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{approach}}" alt="Тропа над Лукомиром"><figcaption>Августовская тропа по кромке: 20 минут от деревни — и никого</figcaption></figure>
+        <figure><img src="{{haystacks}}" alt="Стога в Лукомире"><figcaption>Лукомирское лето: стога, склоны, колокольца</figcaption></figure>
+        <figure><img src="{{blick}}" alt="Каньон Ракитницы"><figcaption>Ракитница: 800 метров зелёной пустоты под ногами</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm free">рассвет</span><span>Если проснулся — над каньоном; будильник запрещён</span></li>
+      <li><span class="tm free">утро</span><span>Медленный завтрак; посмотреть, как доят овец и пекут хлеб (попросить с вечера)</span></li>
+      <li><span class="tm free">день</span><span>Шляться по кромке с пледом и книжкой; пастуший перекус над обрывом</span></li>
+      <li><span class="tm free">после 14</span><span>Горная сиеста: в грозовое окно — терраса и кофе, прошло — обратно на кромку</span></li>
+      <li><span class="tm free">вечер</span><span>Второй закат на Vidikovac — уже со знанием лучшего камня; ужин у печи, ракия</span></li>
+    </ul>
+    <div class="note"><b>Опции по настроению:</b> прогулка в сторону Умоляни на любую долю пути; верховая прогулка (Etno-house); для смелых — спуск к висячему мосту Джуро и купание в ледяной Ракитнице (1.5 ч вниз / 2.5 наверх, только утром, только в трейл-обуви, спросив хозяев про тропу).</div>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="day" id="d6">
+    <div class="eyebrow">День 6 · главный экшен</div>
+    <h3>Лукомир → private-квадры из Коньица → Борачко озеро</h3>
+    <p class="lede">Спуск с плато и 5.5 часов / 80 км на квадрах вокруг каньона Ракитницы: мы вдвоём + гид, каждый за рулём своего квадра, маршрут и темп — под нас. Вечером пыль смывается в ледниковом озере под Пренем.</p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{konjic}}" alt="Коньиц"><figcaption>Коньиц и Стара Чуприя (1682) — как Мостар, но без туравтобусов</figcaption></figure>
+        <figure><img src="{{boracko}}" alt="Борачко озеро"><figcaption>Борачко озеро: +24° в августе, сосны до воды</figcaption></figure>
+        <figure><img src="{{prenj}}" alt="Прень"><figcaption>Прень — «боснийские Гималаи» — нависает прямо над озером</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">07:30</span><span>Рассвет, завтрак, спуск: грейдер → M17 → Коньиц</span></li>
+      <li><span class="tm">11:00</span><span>Private quad tour Travel Konjic: 5.5 ч, 80 км, 161 € за квадр — сам за рулём, фото-стопы где хотим</span></li>
+      <li><span class="tm">16:45</span><span>Коньиц коротко: османский мост, кофе у реки</span></li>
+      <li><span class="tm">17:30</span><span>Серпантин к Борачко озеру (тупиковый заезд — автобусов не бывает)</span></li>
+      <li><span class="tm">18:10</span><span>Вечернее купание — смыть квадровую пыль</span></li>
+      <li><span class="tm">20:00</span><span>Домик у воды, гриль, закат над Пренем</span></li>
+    </ul>
+    <div class="note"><b>Ключевое:</b> права есть только у друга, поэтому оператор выбран под «рулю сам»: у Travel Konjic на сайте требований о правах нет — добиваемся письменного «да» в WhatsApp (+387 61 651 045). Запасной план — багги Can-Am на Блидине (паспорт + waiver). Одежда — которую не жалко, очки/бафф от пыли.</div>
+  </section>
+
+  <!-- DAY 7 -->
+  <section class="day" id="d7">
+    <div class="eyebrow">День 7 · вода и бетон</div>
+    <h3>Зеркальное утро на озере → бункер Тито → Сараево</h3>
+    <p class="lede">Приватный водный блок вместо группового рафтинга: лодка и сап на стеклянной утренней воде. Потом — 90 минут в секретном атомном бункере, который строили 26 лет и о котором не знало даже правительство. Вечером — «домой» в Сараево и первое вино на двоих.</p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{boracko2}}" alt="Утреннее озеро"><figcaption>Утро до ветра: стеклянная вода — и вы на ней одни</figcaption></figure>
+        <figure><img src="{{bunker}}" alt="Бункер ARK D-0"><figcaption>ARK D-0: пульты холодной войны и современное искусство, +12°</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">07:30</span><span>Озеро: лодка (~10–20 KM/час) или сап — первый раз вставать именно тут, вода зеркальная</span></li>
+      <li><span class="tm">10:30</span><span>Сборы, выезд в Коньиц; кофе, наличные, при желании мастерская резьбы Никшичей</span></li>
+      <li><span class="tm">12:00</span><span>Бункер ARK D-0: тур 90 мин, 40 KM, бронь за сутки (+387 62 444 264)</span></li>
+      <li><span class="tm">13:30</span><span>Обед у реки → переезд в Сараево (~1 ч)</span></li>
+      <li><span class="tm">16:00</span><span>Чек-ин на финальные 2 ночи (в идеале та же квартира, что в начале)</span></li>
+      <li><span class="tm">18:00</span><span>Винотека: герцеговинские Žilavka и Blatina — друг не за рулём, пьют оба</span></li>
+      <li><span class="tm">20:00</span><span>Ужин: Kibe Mahala с видом; если среда — севдах в Sevdah Art House</span></li>
+    </ul>
+    <div class="note"><b>Не забыть:</b> купить билеты на завтрашний поезд (касса вокзала до 17:00 или zfbh.ba, туда-обратно ~22.5 KM/чел) и лечь пораньше — поезд в 07:15.</div>
+  </section>
+
+  <!-- DAY 8 -->
+  <section class="day" id="d8">
+    <div class="eyebrow">День 8 · поездной</div>
+    <h3>Мостар одним днём: каньон из окна, мост, Благай</h3>
+    <p class="lede">Мостар без ночёвки, без жары в машине и без руля: два часа по каньону Неретвы на поезде (виды, которых с трассы не существует — сидеть слева), утренний мост до толп, полуденное пекло — у ледяного источника в Благае. Если день выпал на пт–вс, поздний поезд дарит золотой час у Стари Моста.</p>
+    <div class="car" data-car>
+      <div class="track">
+        <figure><img src="{{mostar_pan}}" alt="Панорама Мостара"><figcaption>Стари Мост (1566, ЮНЕСКО) над бирюзовой Неретвой</figcaption></figure>
+        <figure><img src="{{diver}}" alt="Ныряльщик"><figcaption>Клубные ныряльщики прыгают с 24 м — смотреть, снимать, не повторять</figcaption></figure>
+        <figure><img src="{{blagaj}}" alt="Благай"><figcaption>Благай: текия XVI века над пещерой, из которой вырывается река</figcaption></figure>
+        <figure><img src="{{kujundziluk}}" alt="Куюнджилук"><figcaption>Куюнджилук — старый базар у моста</figcaption></figure>
+      </div>
+      <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
+      <div class="dots" role="tablist"></div>
+    </div>
+    <ul class="plan">
+      <li><span class="tm">07:15</span><span>Поезд Сараево → Мостар (~2 ч, сидеть СЛЕВА: каньон, Ябланицкое озеро)</span></li>
+      <li><span class="tm">09:15</span><span>Старый город до пиковых толп; ныряльщики Mostari; опция — их 10-метровая платформа (~10–20 €)</span></li>
+      <li><span class="tm">11:30</span><span>Такси в Благай (12 км): текия, пещера-источник, обед форелью над ледяной Буной</span></li>
+      <li><span class="tm">16:00</span><span>Обратно в Мостар: золотой час у моста, ужин с видом (если пт–вс)</span></li>
+      <li><span class="tm">19:56</span><span>Поезд назад (пт–вс; по будням — 17:09), каньон в вечернем свете</span></li>
+      <li><span class="tm">22:00</span><span>Финальная ночь в Сараево; прощальный ночной бурек</span></li>
+    </ul>
+    <div class="note"><b>Важно:</b> постараться поставить этот день на пятницу–воскресенье — ради позднего поезда 19:56; расписание подтвердить на zfbh.ba. Дресс-код текии: закрытые плечи и колени, накидки дают.</div>
+  </section>
+
+  <!-- DAY 9 -->
+  <section class="day" id="d9">
+    <div class="eyebrow">День 9 · финал</div>
+    <h3>Сараево → Белград</h3>
+    <p class="lede">Спокойный перегон северным маршрутом: Романия → Зворник → граница Мали Зворник → Белград, ~5.5 часов с паузами. Водитель два дня не рулил — едем без героизма, дома к раннему вечеру.</p>
+    <ul class="plan">
+      <li><span class="tm">09:00</span><span>Выезд; финальный бурек и кофе в дорогу</span></li>
+      <li><span class="tm">12:00</span><span>Граница Мали Зворник (24/7; очереди — borderalarm.com)</span></li>
+      <li><span class="tm">13:30</span><span>Обед на сербской стороне</span></li>
+      <li><span class="tm">15:30</span><span>Белград</span></li>
+    </ul>
+    <div class="note"><b>Итог поездки:</b> полетал над Сараево, отчеканил джезву, два дня прожил в деревне на 1470 м, гонял на квадрах вокруг каньона, встал на сап на зеркальном озере, спустился в атомный бункер и проехал каньон Неретвы на поезде. Историй — на год рассказов.</div>
+  </section>
+
+  <h2>Практическое</h2>
+  <div class="pr">
+    <h4>Бюджет на двоих (без белградских плеч)</h4>
+    <ul class="sum">
+      <li>Жильё, 8 ночей — ~450–580 € (Сараево ×5, Лукомир ×2, озеро ×1)</li>
+      <li>Активности — ~890–1020 € (параглайдинг 260 · квадры 320 · бункер 40 · воркшоп 60–90 · тур осады 60–120 · хамам 80–120 · канатка 30 · поезд 23 · лодка 15)</li>
+      <li>Еда и напитки — ~360–480 €</li>
+      <li>Бензин, дороги, парковки — ~100–160 €</li>
+      <li><b>Итого ~1800–2250 €</b></li>
+    </ul>
+  </div>
+  <div class="pr">
+    <h4>Брони — в порядке важности</h4>
+    <ul>
+      <li>Параглайдинг: Sarajevo Bosnia Tours, WhatsApp +387 62 143 144 (вечерний слот дня 2, резерв день 3)</li>
+      <li>Квадры: Travel Konjic, WhatsApp +387 61 651 045 — private, письменное «да» про документы</li>
+      <li>Лукомир, 2 ночи: Bobića konak (юнит с приватным санузлом) / Na krovu svijeta — Booking, наличные; спросить про теферич</li>
+      <li>Бункер: +387 62 444 264, слот 12:00 дня 7, бронь за сутки, наличные</li>
+      <li>Жильё: Сараево 3+2 ночи (парковка!), Борачко 1 ночь (Guest house Boračko Lake / Eko selo)</li>
+      <li>Воркшоп у медника (Viator/artandtours.ba) и тур осады (sarajevoinsider.com) — на день 3</li>
+      <li>Поезд в Мостар — накануне в кассе вокзала или на zfbh.ba</li>
+    </ul>
+  </div>
+  <div class="pr">
+    <h4>Must eat / drink</h4>
+    <ul>
+      <li>Чевапи-дерби (Željo vs Ferhatović vs Petica) · обед в ашчинице · босанска кафа как ритуал</li>
+      <li>Ночной бурек из-под сача · тёмное Sarajevsko в пивоварне, пережившей осаду</li>
+      <li>Уштипцы с каймаком и домашний сыр в горах · форель над Буной в Благае</li>
+      <li>Žilavka и Blatina в сараевской винотеке · тухафия, хурмашица, ракия</li>
+    </ul>
+  </div>
+  <div class="pr">
+    <h4>Правила поездки</h4>
+    <ul>
+      <li>Водитель один: паузы каждые 2–2.5 ч, дегустации — пассажиру, водителю — бутылка с собой</li>
+      <li>Наличные KM — главная валюта гор: Лукомир, озеро, бункер, бувляк карты не берут</li>
+      <li>Горы: тёплые вещи на вечер (+8–12° ночью на 1470 м), большие прогулки — до 15:00 (грозы)</li>
+      <li>Мостар и Благай живут до 10 утра и после 17 — в пекло не соваться</li>
+    </ul>
+  </div>
+
+  <div class="foot">Собрано в июле 2026 · цены и контакты проверены на момент составления · фото: Wikimedia Commons (свободные лицензии)</div>
+</div>
+
+<script>
+document.querySelectorAll('[data-car]').forEach(function(car){
+  var track = car.querySelector('.track');
+  var slides = car.querySelectorAll('figure');
+  var dotsBox = car.querySelector('.dots');
+  slides.forEach(function(_, i){
+    var d = document.createElement('button');
+    d.setAttribute('aria-label', 'Кадр ' + (i+1));
+    d.addEventListener('click', function(){ go(i); });
+    dotsBox.appendChild(d);
+  });
+  var dots = dotsBox.querySelectorAll('button');
+  function w(){ return Math.max(1, track.clientWidth); }
+  function cur(){ return Math.round(track.scrollLeft / w()); }
+  function go(i){
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    var target = i * w();
+    var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try { track.scrollTo({left: target, behavior: smooth ? 'smooth' : 'auto'}); }
+    catch (e) { track.scrollLeft = target; }
+    clearTimeout(track._rescue);
+    track._rescue = setTimeout(function(){
+      if (Math.abs(track.scrollLeft - target) > 8) track.scrollLeft = target;
+    }, 450);
+  }
+  function paint(){
+    var c = cur();
+    dots.forEach(function(d, i){ d.classList.toggle('on', i === c); });
+  }
+  track.addEventListener('scroll', function(){ requestAnimationFrame(paint); });
+  car.querySelector('.prev').addEventListener('click', function(){ go(cur() - 1); });
+  car.querySelector('.next').addEventListener('click', function(){ go(cur() + 1); });
+  window.addEventListener('load', paint);
+  paint();
+});
+</script>
