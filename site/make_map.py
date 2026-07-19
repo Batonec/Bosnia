@@ -73,27 +73,25 @@ def line(names, eps=0):
         d += f"L{x} {y}"
     return d
 
-# route legs
-leg_south = line(["belgrade", "cacak", "pozega", "uzice", "mokra_gora", "visegrad", "rogatica", "sokolac", "sarajevo"])
+# route legs (car only; Belgrade leg is now a FLIGHT)
 leg_mount = line(["sarajevo", "hadzici", "babin_do", "umoljani", "lukomir"])
 leg_konjic = line(["lukomir", "umoljani", "babin_do", "hadzici", "tarcin", "konjic", "boracko"])
 leg_back1 = line(["boracko", "konjic", "tarcin", "hadzici", "sarajevo"])
-leg_north = line(["sarajevo", "sokolac", "vlasenica", "zvornik", "loznica", "sabac", "belgrade"])
-rail = line(["sarajevo", "hadzici", "tarcin", "ivan", "konjic", "jab_lake", "jablanica", "neretva_bend", "salakovac", "mostar"])
-taxi = line(["mostar", "blagaj"])
+
+# plane arc Belgrade <-> Sarajevo (quadratic curve bulging north)
+bx, by = P(*PTS["belgrade"])
+sx, sy = P(*PTS["sarajevo"])
+cx, cy = (bx + sx) / 2 - 30, min(by, sy) - 90
+plane = f"M{sx} {sy}Q{cx} {cy} {bx} {by}"
 
 # numbered stops: (key, label, dx, dy anchor tweaks)
 STOPS = [
-    ("belgrade", "Белград", "старт · финал Д9", -12, -4, "end"),
-    ("mokra_gora", "Мокра Гора", "Д1", 8, -12, "start"),
-    ("visegrad", "Вишеград", "Д1", -6, -14, "end"),
-    ("sarajevo", "Сараево", "Д1-3 · Д7-9", 12, -10, "start"),
+    ("belgrade", "Белград", "прилёт 31.07 · рейсы 4.08 и 11.08", -12, -4, "end"),
+    ("sarajevo", "Сараево", "Д1-3", 12, -10, "start"),
     ("umoljani", "Умоляни", "Д4", 13, -6, "start"),
     ("lukomir", "Лукомир", "Д4-6", -13, 16, "end"),
-    ("konjic", "Коньиц", "Д6-7", -13, -16, "end"),
-    ("boracko", "Борачко оз.", "Д6-7", 13, 12, "start"),
-    ("mostar", "Мостар", "Д8, поезд", -13, -8, "end"),
-    ("blagaj", "Благай", "Д8", 13, 6, "start"),
+    ("konjic", "Коньиц", "Д6, старт квадров", -13, -16, "end"),
+    ("boracko", "Борачко оз.", "Д6-8, две ночи", 13, 12, "start"),
 ]
 
 svg = []
@@ -108,18 +106,11 @@ for nm, lon, lat in (("БОСНИЯ И ГЕРЦЕГОВИНА", 17.85, 44.55), (
     x, y = P(lon, lat)
     svg.append(f'<text x="{x}" y="{y}" font-size="11" letter-spacing="2" fill="var(--muted)" opacity="0.65" text-anchor="middle">{nm}</text>')
 # route: car legs
-for d in (leg_south, leg_mount, leg_konjic, leg_back1, leg_north):
+for d in (leg_mount, leg_konjic, leg_back1):
     svg.append(f'<path d="{d}" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>')
-# rail dashed copper
-svg.append(f'<path d="{rail}" fill="none" stroke="var(--copper)" stroke-width="2.2" stroke-dasharray="7 5" stroke-linejoin="round" stroke-linecap="round"/>')
-svg.append(f'<path d="{taxi}" fill="none" stroke="var(--copper)" stroke-width="1.6" stroke-dasharray="2 4" stroke-linecap="round"/>')
-# direction labels on legs
-def midlabel(names, text, dy=-6):
-    a, b = PTS[names[0]], PTS[names[1]]
-    x, y = P((a[0]+b[0])/2, (a[1]+b[1])/2)
-    return f'<text x="{x}" y="{y+dy}" font-size="11" fill="var(--muted)" text-anchor="middle">{text}</text>'
-svg.append(midlabel(["belgrade", "cacak"], "Д1 →", -8))
-svg.append(midlabel(["vlasenica", "zvornik"], "← Д9"))
+# plane dashed copper arc
+svg.append(f'<path d="{plane}" fill="none" stroke="var(--copper)" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round"/>')
+svg.append(f'<text x="{(bx+sx)/2 - 28}" y="{cy + 46}" font-size="11" fill="var(--copper)" text-anchor="middle">самолёт · 4.08 -> и <- 11.08</text>')
 # stops
 for i, (k, name, days, dx, dy, anchor) in enumerate(STOPS, 1):
     x, y = P(*PTS[k])
@@ -127,20 +118,13 @@ for i, (k, name, days, dx, dy, anchor) in enumerate(STOPS, 1):
     svg.append(f'<text x="{x}" y="{y}" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">{i}</text>')
     ly = y + dy
     svg.append(f'<text x="{x+dx}" y="{ly}" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="{anchor}">{name} <tspan fill="var(--muted)" font-weight="400" font-size="10">· {days}</tspan></text>')
-# border crossings
-for k, label in (("kotroman", "граница Котроман"), ("mali_zvornik", "граница М. Зворник")):
-    if k in PTS:
-        x, y = P(*PTS[k])
-        svg.append(f'<rect x="{x-3.5}" y="{y-3.5}" width="7" height="7" fill="none" stroke="var(--muted)" stroke-width="1.4" transform="rotate(45 {x} {y})"/>')
-        lx2, ly2, anch = (x - 8, y + 16, "end") if k == "kotroman" else (x + 9, y - 8, "start")
-        svg.append(f'<text x="{lx2}" y="{ly2}" font-size="10" fill="var(--muted)" text-anchor="{anch}">{label}</text>')
 # legend
 lx, ly = 26, 36
-svg.append(f'<rect x="{lx-10}" y="{ly-18}" width="196" height="74" rx="8" fill="var(--card)" stroke="var(--line)"/>')
+svg.append(f'<rect x="{lx-10}" y="{ly-18}" width="200" height="74" rx="8" fill="var(--card)" stroke="var(--line)"/>')
 svg.append(f'<line x1="{lx}" y1="{ly}" x2="{lx+34}" y2="{ly}" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>')
-svg.append(f'<text x="{lx+42}" y="{ly+4}" font-size="11.5" fill="var(--ink)">машина</text>')
+svg.append(f'<text x="{lx+42}" y="{ly+4}" font-size="11.5" fill="var(--ink)">машина (аренда в SJJ)</text>')
 svg.append(f'<line x1="{lx}" y1="{ly+20}" x2="{lx+34}" y2="{ly+20}" stroke="var(--copper)" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round"/>')
-svg.append(f'<text x="{lx+42}" y="{ly+24}" font-size="11.5" fill="var(--ink)">поезд (Д8, туда-обратно)</text>')
+svg.append(f'<text x="{lx+42}" y="{ly+24}" font-size="11.5" fill="var(--ink)">самолёт BEG-SJJ</text>')
 svg.append(f'<circle cx="{lx+6}" cy="{ly+40}" r="7" fill="var(--accent)"/>')
 svg.append(f'<text x="{lx+42}" y="{ly+44}" font-size="11.5" fill="var(--ink)">точки маршрута</text>')
 svg.append('</svg>')

@@ -8,54 +8,34 @@
 <text x="607.2" y="211.3" font-size="11" letter-spacing="2" fill="var(--muted)" opacity="0.65" text-anchor="middle">СЕРБИЯ</text>
 <text x="360.5" y="554.6" font-size="11" letter-spacing="2" fill="var(--muted)" opacity="0.65" text-anchor="middle">ЧЕРНОГОРИЯ</text>
 <text x="56.9" y="34.3" font-size="11" letter-spacing="2" fill="var(--muted)" opacity="0.65" text-anchor="middle">ХОРВАТИЯ</text>
-<path d="M627.5 87.7L607.0 332.4L547.5 344.3L510.9 342.9L447.2 358.5L406.3 361.1L351.7 356.9L312.7 320.6L243.1 340.9" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M243.1 340.9L199.6 350.8L215.0 378.5L204.5 390.8L196.0 399.5" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M196.0 399.5L204.5 390.8L215.0 378.5L199.6 350.8L179.0 358.0L153.8 395.0L167.1 422.0" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M167.1 422.0L153.8 395.0L179.0 358.0L199.6 350.8L243.1 340.9" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M243.1 340.9L312.7 320.6L339.9 255.6L370.5 202.2L393.9 162.9L483.0 103.7L627.5 87.7" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M243.1 340.9L199.6 350.8L179.0 358.0L164.7 381.6L153.8 395.0L132.8 400.6L116.1 393.0L111.0 429.1L118.6 454.2L126.2 478.7" fill="none" stroke="var(--copper)" stroke-width="2.2" stroke-dasharray="7 5" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M126.2 478.7L143.0 499.8" fill="none" stroke="var(--copper)" stroke-width="1.6" stroke-dasharray="2 4" stroke-linecap="round"/>
-<text x="617.2" y="202.1" font-size="11" fill="var(--muted)" text-anchor="middle">Д1 →</text>
-<text x="355.2" y="222.9" font-size="11" fill="var(--muted)" text-anchor="middle">← Д9</text>
+<path d="M243.1 340.9Q405.3 -2.299999999999997 627.5 87.7" fill="none" stroke="var(--copper)" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round"/>
+<text x="407.3" y="43.7" font-size="11" fill="var(--copper)" text-anchor="middle">самолёт · 4.08 -> и <- 11.08</text>
 <circle cx="627.5" cy="87.7" r="9" fill="var(--accent)"/>
 <text x="627.5" y="87.7" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">1</text>
-<text x="615.5" y="83.7" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Белград <tspan fill="var(--muted)" font-weight="400" font-size="10">· старт · финал Д9</tspan></text>
-<circle cx="447.2" cy="358.5" r="9" fill="var(--accent)"/>
-<text x="447.2" y="358.5" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">2</text>
-<text x="455.2" y="346.5" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Мокра Гора <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д1</tspan></text>
-<circle cx="406.3" cy="361.1" r="9" fill="var(--accent)"/>
-<text x="406.3" y="361.1" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">3</text>
-<text x="400.3" y="347.1" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Вишеград <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д1</tspan></text>
+<text x="615.5" y="83.7" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Белград <tspan fill="var(--muted)" font-weight="400" font-size="10">· прилёт 31.07 · рейсы 4.08 и 11.08</tspan></text>
 <circle cx="243.1" cy="340.9" r="9" fill="var(--accent)"/>
-<text x="243.1" y="340.9" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">4</text>
-<text x="255.1" y="330.9" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Сараево <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д1-3 · Д7-9</tspan></text>
+<text x="243.1" y="340.9" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">2</text>
+<text x="255.1" y="330.9" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Сараево <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д1-3</tspan></text>
 <circle cx="204.5" cy="390.8" r="9" fill="var(--accent)"/>
-<text x="204.5" y="390.8" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">5</text>
+<text x="204.5" y="390.8" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">3</text>
 <text x="217.5" y="384.8" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Умоляни <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д4</tspan></text>
 <circle cx="196.0" cy="399.5" r="9" fill="var(--accent)"/>
-<text x="196.0" y="399.5" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">6</text>
+<text x="196.0" y="399.5" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">4</text>
 <text x="183.0" y="415.5" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Лукомир <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д4-6</tspan></text>
 <circle cx="153.8" cy="395.0" r="9" fill="var(--accent)"/>
-<text x="153.8" y="395.0" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">7</text>
-<text x="140.8" y="379.0" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Коньиц <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д6-7</tspan></text>
+<text x="153.8" y="395.0" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">5</text>
+<text x="140.8" y="379.0" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Коньиц <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д6, старт квадров</tspan></text>
 <circle cx="167.1" cy="422.0" r="9" fill="var(--accent)"/>
-<text x="167.1" y="422.0" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">8</text>
-<text x="180.1" y="434.0" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Борачко оз. <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д6-7</tspan></text>
-<circle cx="126.2" cy="478.7" r="9" fill="var(--accent)"/>
-<text x="126.2" y="478.7" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">9</text>
-<text x="113.2" y="470.7" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="end">Мостар <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д8, поезд</tspan></text>
-<circle cx="143.0" cy="499.8" r="9" fill="var(--accent)"/>
-<text x="143.0" y="499.8" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">10</text>
-<text x="156.0" y="505.8" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Благай <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д8</tspan></text>
-<rect x="431.0" y="359.1" width="7" height="7" fill="none" stroke="var(--muted)" stroke-width="1.4" transform="rotate(45 434.5 362.6)"/>
-<text x="426.5" y="378.6" font-size="10" fill="var(--muted)" text-anchor="end">граница Котроман</text>
-<rect x="369.3" y="198.0" width="7" height="7" fill="none" stroke="var(--muted)" stroke-width="1.4" transform="rotate(45 372.8 201.5)"/>
-<text x="381.8" y="193.5" font-size="10" fill="var(--muted)" text-anchor="start">граница М. Зворник</text>
-<rect x="16" y="18" width="196" height="74" rx="8" fill="var(--card)" stroke="var(--line)"/>
+<text x="167.1" y="422.0" font-size="10.5" font-weight="700" fill="var(--ground)" text-anchor="middle" dominant-baseline="central">6</text>
+<text x="180.1" y="434.0" font-size="12.5" font-weight="600" fill="var(--ink)" text-anchor="start">Борачко оз. <tspan fill="var(--muted)" font-weight="400" font-size="10">· Д6-8, две ночи</tspan></text>
+<rect x="16" y="18" width="200" height="74" rx="8" fill="var(--card)" stroke="var(--line)"/>
 <line x1="26" y1="36" x2="60" y2="36" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
-<text x="68" y="40" font-size="11.5" fill="var(--ink)">машина</text>
+<text x="68" y="40" font-size="11.5" fill="var(--ink)">машина (аренда в SJJ)</text>
 <line x1="26" y1="56" x2="60" y2="56" stroke="var(--copper)" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round"/>
-<text x="68" y="60" font-size="11.5" fill="var(--ink)">поезд (Д8, туда-обратно)</text>
+<text x="68" y="60" font-size="11.5" fill="var(--ink)">самолёт BEG-SJJ</text>
 <circle cx="32" cy="76" r="7" fill="var(--accent)"/>
 <text x="68" y="80" font-size="11.5" fill="var(--ink)">точки маршрута</text>
 </svg>
