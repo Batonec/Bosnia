@@ -55,7 +55,7 @@
 ## Порядок броней (даты известны — делать СРАЗУ)
 1. [x] `Авиабилеты BEG<->SJJ` — КУПЛЕНЫ (JU652/JU653, PNR HEPXSS; билеты лежат в flights/)
 2. `Аренда машины в SJJ` на 4–11.08, водитель — друг
-3. `Параглайдинг` на ср 5.08 вечер (резерв чт 6.08): Sarajevo Bosnia Tours, ~130 €/чел с трансфером из города, WhatsApp/Viber +387 62 143 144, sales@sarajevobosniatours.ba. Спросить про GoPro-видео
+3. `Параглайдинг` на ср 5.08 вечер (резерв чт 6.08). ⚠️ Viator отпал: продавцы отвечают лениво, трансфера до горы нет. Новый порядок: **Sarajevo Bosnia Tours** (~130 €/чел с трансфером из города, WhatsApp/Viber +387 62 143 144, sales@sarajevobosniatours.ba, спросить GoPro) -> параллельно клуб **ExtremeSport** (140 KM ≈ 72 €, IG @extremesport.ba) -> молчат к утру среды: инстант-бронь GetYourGuide/Viator ~$190–225 с пикапом из отеля (слот утренний) -> при ветре: парамотор NowBosnia. Полный разбор и заготовка сообщения: [days/day_02_sarajevo_paragliding.md](days/day_02_sarajevo_paragliding.md)
 4. `Квадры на вс 9.08` — требование: рулю САМ (прав нет), private tour, свобода маршрута. Написать и добиться письменного «да»:
    - **Приоритет: Travel Konjic** (WhatsApp +387 61 651 045, info@travelkonjic.com) — на сайте требований о правах нет, возраст от 12, «personalized route». Тур «Лукомир» 5.5 ч / 80 км через каньон Ракитницы — 161 € за квадр, для двоих 2 квадра = 322 €. Приватный формат: мы вдвоём + гид
    - Аварийный вариант: Quad Tour Bjelašnica с Бабин До (WhatsApp +387 61 270 720) — только на крайний случай (багги Блидине умер вместе с Мостаром)
@@ -107,7 +107,7 @@
 > One of us has riding experience but no driving license — is it OK for him to drive his own quad on the mountain trails (not public roads)? We're happy to sign a liability waiver. Our date is Sunday, August 9.
 
 ## Источники (проверены июль 2026)
-- Параглайдинг: sarajevobosniatours.ba, extremesport.ba
+- Параглайдинг: sarajevobosniatours.ba, extremesport.ba; альтернативы (проверены 4.08.2026): europaadventure.com (от 99 € с трансфером), nowbosnia.rezgo.com (онлайн-бронь, есть парамотор), getyourguide.com / viator.com лот 167019P6 (~$190–225, hotel pickup, отмена 24 ч), funkytours.com (+387 62 612 612), adventure.ba, обзор площадок: sarajevodaytrips.com/paragliding-bosnia
 - Квадры: quadtourbjelasnica.com, quadrentbjelasnica.ba
 - Лукомир: Booking.com (Letnja Bašta, Bobića konak, Etno-house), гайд thepetitewanderer.com (июнь 2026)
 - Бункер: bunker.ba, discoverkonjic.com; рафтинг: raftbosnia.com, travelkonjic.com
