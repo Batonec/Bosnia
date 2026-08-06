@@ -109,6 +109,20 @@
   .plan li{display:flex; gap:14px; padding:9px 2px; border-bottom:1px solid var(--line); font-size:14.5px;}
   .plan .tm{flex:0 0 92px; color:var(--accent); font-variant-numeric:tabular-nums; font-weight:600; font-size:13.5px; padding-top:1px;}
   .plan .free{color:var(--muted); font-weight:500;}
+  a.mapl{color:var(--sky); text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; text-decoration-thickness:1px;}
+  a.mapl::before{content:""; display:inline-block; width:11px; height:11px; margin-right:2px; vertical-align:-1px; background:currentColor;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z'/%3E%3C/svg%3E") center/contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z'/%3E%3C/svg%3E") center/contain no-repeat;}
+  .routes{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:14px;}
+  .routes .lbl{color:var(--muted); font-size:12.5px; font-weight:600;}
+  .routes a{display:inline-flex; align-items:center; font-size:12.5px; font-weight:600; color:var(--sky);
+    border:1px solid var(--line); border-radius:999px; padding:4px 12px; text-decoration:none; white-space:nowrap;}
+  .routes a:hover{border-color:var(--sky);}
+  .routes a:focus-visible{outline:2px solid var(--sky); outline-offset:2px;}
+  .dcard.past{opacity:.62;}
+  .dcard.past .n::after{content:" · было";}
+  .dcard.today{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset;}
+  .dcard.today .n{color:var(--accent); font-weight:700;}
 
   .note{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--copper);
     border-radius:10px; padding:12px 16px; margin-top:18px; font-size:14px;}
@@ -138,16 +152,16 @@
   <h2>Маршрут по дням</h2>
   <p class="sub">Клик по карточке ведёт к полному дню. Пиктограммы: машина — часы за рулём, самолёт — перелёт.</p>
   <div class="grid">
-    <a class="dcard" href="#cal"><div class="head"><span class="n">пт 31.07</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> VKO 06:10 → BEG 15:55</span></span></div>
+    <a class="dcard past" href="#cal"><div class="head"><span class="n">пт 31.07</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> VKO 06:10 → BEG 15:55</span></span></div>
       <div class="t">Перелёт Москва → Белград</div></a>
-    <a class="dcard" href="#cal"><div class="head"><span class="n">сб–пн · 1–3.08</span></div>
+    <a class="dcard past" href="#cal"><div class="head"><span class="n">сб–пн · 1–3.08</span></div>
       <div class="t">Воссоединение с Белградом</div></a>
-    <a class="dcard" href="#d1"><div class="head"><span class="n">вт 4.08</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> JU652 · 13:40 → 14:40</span></span></div>
+    <a class="dcard past" href="#d1"><div class="head"><span class="n">вт 4.08</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> JU652 · 13:40 → 14:40</span></span></div>
       <div class="t">Перелёт в Сараево, первый вечер</div></a>
-    <a class="dcard" href="#d2"><div class="head"><span class="n">ср 5.08</span></div>
+    <a class="dcard past" href="#d2"><div class="head"><span class="n">ср 5.08</span></div>
       <div class="t">Параглайдинг над Сараево</div></a>
-    <a class="dcard" href="#d3"><div class="head"><span class="n">чт 6.08</span></div>
-      <div class="t">Сараево full day</div></a>
+    <a class="dcard today" href="#d3"><div class="head"><span class="n">чт 6.08 · сегодня</span></div>
+      <div class="t">Сараево full day: канатка, бобслей, закат на крепости</div></a>
     <a class="dcard" href="#d4"><div class="head"><span class="n">пт 7.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 2 ч</span></span></div>
       <div class="t">В Лукомир — через плато и Умоляни</div></a>
     <a class="dcard" href="#d5"><div class="head"><span class="n">сб 8.08</span></div>
@@ -161,14 +175,14 @@
   </div>
 
   <h2>Карта маршрута</h2>
-  <p class="sub">Прилетаем и улетаем самолётом (пунктирная дуга), внутри Боснии — арендная машина: Сараево → горная петля Лукомир → квадры из Коньица → два дня на Борачко озере → аэропорт.</p>
+  <p class="sub">Прилетаем и улетаем самолётом (пунктирная дуга), внутри Боснии — арендная машина: Сараево → горная петля Лукомир → квадры из Коньица → два дня на Борачко озере → аэропорт. Все точки с пином в планах дней кликабельны — открываются в Google Maps.</p>
   <div class="mapbox">
 MAPSVG_PLACEHOLDER
   </div>
 
   <!-- DAY 1 -->
   <section class="day" id="d1">
-    <div class="eyebrow">вт 4.08 · прилёт</div>
+    <div class="eyebrow">вт 4.08 · прилёт · было</div>
     <h3>Перелёт Белград → Сараево, первый вечер города</h3>
     <p class="lede">JU652, 13:40–14:40, час лёту — и другой мир: минареты, медь, горы со всех сторон. Взять машину в аэропорту, заселиться и войти в город мягко: кофе у Латинского моста, Башчаршия, закат на Жёлтой крепости. <em>До этого — с 31.07 чилл в Белграде.</em></p>
     <div class="car" data-car>
@@ -183,24 +197,24 @@ MAPSVG_PLACEHOLDER
     <ul class="plan">
       <li><span class="tm">13:40</span><span>Вылет из Белграда (JU652, Терминал 2, багаж 23 кг) — в 14:40 уже в Сараево</span></li>
       <li><span class="tm">14:40</span><span>Прилёт: багаж, аренда машины, 20 минут до жилья в Стари Граде</span></li>
-      <li><span class="tm">16:30</span><span>Latin Bridge — место убийства Франца-Фердинанда, кофе рядом</span></li>
-      <li><span class="tm">17:30</span><span>Башчаршия: Себиль, боковые улочки, первый раунд чевапи-дерби (Željo)</span></li>
-      <li><span class="tm">19:10</span><span>Подъём на Жёлтую крепость — золотой час и закат над городом</span></li>
-      <li><span class="tm">20:45</span><span>Ужин: Inat Kuća — дом с городской легендой</span></li>
+      <li><span class="tm">16:30</span><span><a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Latin+Bridge+Sarajevo">Latin Bridge</a> — место убийства Франца-Фердинанда, кофе рядом</span></li>
+      <li><span class="tm">17:30</span><span>Башчаршия: <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Sebilj+Sarajevo">Себиль</a>, боковые улочки, первый раунд чевапи-дерби (<a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Cevabdzinica+Zeljo+Sarajevo">Željo</a>)</span></li>
+      <li><span class="tm">19:10</span><span>Подъём на <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Zuta+Tabija+Sarajevo">Жёлтую крепость</a> — золотой час и закат над городом</span></li>
+      <li><span class="tm">20:45</span><span>Ужин: <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Inat+Kuca+Sarajevo">Inat Kuća</a> — дом с городской легендой</span></li>
     </ul>
     <div class="note"><b>Важно:</b> снять KM сегодня — дальше много «только кэш»; подтвердить с пилотом завтрашний полёт; жильё с парковкой.</div>
   </section>
 
   <!-- DAY 2 -->
   <section class="day" id="d2">
-    <div class="eyebrow">ср 5.08 · первый экшен</div>
+    <div class="eyebrow">ср 5.08 · первый экшен · было — полёт состоялся</div>
     <h3>Город с утра → вечерний параглайдинг</h3>
     <p class="lede">Утро без спешки — кофе-ритуал, живой рынок Маркале, обед «как местные» в ашчинице. Вечером главная история: полёт в тандеме над чашей сараевских гор в золотом свете. <em>Следующий день — погодный резерв полёта.</em></p>
     <figure class="solo"><img src="{{panorama}}" alt="Панорама Сараево"><figcaption>Город в чаше гор — вот над этим ты будешь лететь вечером</figcaption></figure>
     <ul class="plan">
-      <li><span class="tm">10:00</span><span>Кофе-ритуал в Čajdžinica Džirlo: джезва, лукум, «ćejf»</span></li>
-      <li><span class="tm">11:00</span><span>Маркале утром + боковые улочки Башчаршии, медь Казанджилука</span></li>
-      <li><span class="tm">12:30</span><span>Обед в ашчинице ASDŽ — брать глазами самое местное</span></li>
+      <li><span class="tm">10:00</span><span>Кофе-ритуал в <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Cajdzinica+Dzirlo+Sarajevo">Čajdžinica Džirlo</a>: джезва, лукум, «ćejf»</span></li>
+      <li><span class="tm">11:00</span><span><a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Markale+Sarajevo">Маркале</a> утром + боковые улочки Башчаршии, медь <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Kazandziluk+Sarajevo">Казанджилука</a></span></li>
+      <li><span class="tm">12:30</span><span>Обед в ашчинице <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Ascinica+ASDZ+Sarajevo">ASDŽ</a> — брать глазами самое местное</span></li>
       <li><span class="tm">13:30</span><span>Лёгкая прогулка, отдых; не наедаться перед полётом</span></li>
       <li><span class="tm">16:00</span><span>Параглайдинг: пикап из города, гора по ветру, полёт 15–30 мин, GoPro-видео</span></li>
       <li><span class="tm">20:30</span><span>Ужин в старом городе</span></li>
@@ -210,29 +224,36 @@ MAPSVG_PLACEHOLDER
 
   <!-- DAY 3 -->
   <section class="day" id="d3">
-    <div class="eyebrow">чт 6.08 · город глубоко</div>
-    <h3>Осада, медник, бобслей, хамам</h3>
-    <p class="lede">Война 90-х глазами живого свидетеля, ремесло — руками: сам чеканишь свою джезву у мастера на Казанджилуке. Вечером — заброшенная бобслейная трасса Олимпиады-84 и закат на пустой Белой крепости.</p>
+    <div class="eyebrow">чт 6.08 · сегодня · пересобран под подъём в 14:00</div>
+    <h3>Канатка, бобслей-84, военное детство — и закат на Жёлтой крепости</h3>
+    <p class="lede">После вчерашнего полёта утро честно проспано — тур осады и воркшоп уехали в копилку следующего раза. День собран вокруг того, чего ты ещё не видел: прохладный Требевич с олимпийским жёлобом, один сильный музей — и закатный финал на Žuta Tabija, как хотелось с первого вечера. <em>Вводные дня: закат 20:05 · канатка до 21:00, 30 KM туда-обратно · внизу ~34°, наверху ~25° · к вечеру возможна гроза — следить за небом. Футбола на Кошево нет: «Сараево» вылетело ещё в июле.</em></p>
     <div class="car" data-car>
       <div class="track">
-        <figure><img src="{{bob}}" alt="Бобслейная трасса"><figcaption>Жёлоб Олимпиады-84 на Требевиче: бетон, граффити, лес</figcaption></figure>
-        <figure><img src="{{kazandziluk}}" alt="Казанджилук"><figcaption>Казанджилук: улица медников — тут твой воркшоп</figcaption></figure>
-        <figure><img src="{{tunnel}}" alt="Тоннель спасения"><figcaption>Тоннель спасения: 800 м под аэропортом — артерия города в осаду</figcaption></figure>
-        <figure><img src="{{bijela}}" alt="Белая крепость"><figcaption>Bijela Tabija — выше и пустыннее Жёлтой, закат отсюда</figcaption></figure>
+        <figure><img src="{{bob}}" alt="Бобслейная трасса"><figcaption>Жёлоб Олимпиады-84 на Требевиче: бетон, граффити, лес — ходить прямо по трассе</figcaption></figure>
+        <figure><img src="{{kazandziluk}}" alt="Казанджилук"><figcaption>Казанджилук: купить джезву у мастеров Huseinović — воркшоп не случился, медь остаётся</figcaption></figure>
+        <figure><img src="{{zuta}}" alt="Жёлтая крепость"><figcaption>Žuta Tabija — сегодняшний финал: золотой час с 19:30, закат в 20:05</figcaption></figure>
+        <figure><img src="{{bijela}}" alt="Белая крепость"><figcaption>Bijela Tabija — план Б: на 10 минут выше и всегда пустая</figcaption></figure>
       </div>
       <button class="btn prev" aria-label="Назад">‹</button><button class="btn next" aria-label="Вперёд">›</button>
       <div class="dots" role="tablist"></div>
     </div>
     <ul class="plan">
-      <li><span class="tm">08:30</span><span>Тур с пережившим осаду (Times of Misfortune / «Veteran’s Story», ~3.5 ч)</span></li>
-      <li><span class="tm">12:00</span><span>Чевапи-дерби, раунд 2: Ferhatović или Petica</span></li>
-      <li><span class="tm">13:30</span><span>Воркшоп у медника: своя джезва под руководством казанджии (~30–45 €)</span></li>
-      <li><span class="tm">15:00</span><span>Хамам: ритуальный пакет 90–120 мин — пар, скраб, пена, масло</span></li>
-      <li><span class="tm">17:00</span><span>Канатка на Требевич → бобслейная трасса пешком по жёлобу</span></li>
-      <li><span class="tm">19:15</span><span>Закат на Белой крепости</span></li>
-      <li><span class="tm">20:45</span><span>Ужин + тёмное Sarajevsko в Pivnica HS (пивоварня, работавшая всю осаду)</span></li>
+      <li><span class="tm">14:00</span><span>Обед — чевапи-дерби, раунд 2: <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Cevabdzinica+Ferhatovic+Sarajevo">Ferhatović</a> или <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Petica+Ferhatovic+Sarajevo">Petica</a> на Bravadžiluk; сравнить с Željo и выбрать сторону</span></li>
+      <li><span class="tm">14:45</span><span>Медь по делу: джезва у мастеров Huseinović на <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Kazandziluk+Sarajevo">Казанджилуке</a> + молотый кофе и чай домой — последний городской день</span></li>
+      <li><span class="tm">15:30</span><span><a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Sarajevo+Cable+Car">Канатка</a> наверх — нижняя станция в Бистрике, 7–10 мин пешком от Башчаршии</span></li>
+      <li><span class="tm">15:45</span><span>Требевич: смотровая <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Vidikovac+Trebevic">Vidikovac</a>, дальше 10–15 мин пешком до <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Sarajevo+Olympic+Bobsleigh+Track">бобслейной трассы Олимпиады-84</a> — гулять прямо по жёлобу, наверху прохладно</span></li>
+      <li><span class="tm">17:50</span><span>Спуск канаткой обратно в Бистрик</span></li>
+      <li><span class="tm">18:10</span><span><a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=War+Childhood+Museum+Sarajevo">War Childhood Museum</a> (Logavina 32, ~10 KM) — маленький и очень сильный, часа хватает; закрывает тему осады вместо проспанного тура</span></li>
+      <li><span class="tm">19:05</span><span>Через Башчаршию и <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Kovaci+Cemetery+Sarajevo">Ковачи</a> наверх к крепости; воду/пиво взять по пути — на месте кафешка с очередью</span></li>
+      <li><span class="tm">19:25</span><span>Золотой час и закат (20:05) на <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Zuta+Tabija+Sarajevo">Жёлтой крепости</a> — прийти за полчаса, бортики разбирают; если толпа — 10 минут выше до <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Bijela+Tabija+Sarajevo">Белой</a></span></li>
+      <li><span class="tm">20:30</span><span>Ужин: вниз через <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Alifakovac+Sarajevo">Алифаковац</a> (белые надгробия в сумерках) → <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Inat+Kuca+Sarajevo">Inat Kuća</a> или <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Pivnica+HS+Sarajevo">Pivnica HS</a> с тёмным Sarajevsko; ночной бурек на <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Bravadziluk+Sarajevo">Bravadžiluk</a></span></li>
     </ul>
-    <div class="note"><b>Вечером свериться:</b> подтвердить Лукомир (заезд завтра) и квадры Travel Konjic на день 6; снять наличные KM — дальше горы, карты не берут.</div>
+    <div class="routes"><span class="lbl">Пешие отрезки:</span>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Cevabdzinica+Ferhatovic+Sarajevo&amp;waypoints=Kazandziluk+Sarajevo&amp;destination=Sarajevo+Cable+Car&amp;travelmode=walking">обед → медь → канатка</a>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Vidikovac+Trebevic&amp;destination=Sarajevo+Olympic+Bobsleigh+Track&amp;travelmode=walking">наверху: станция → жёлоб</a>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Sarajevo+Cable+Car&amp;waypoints=War+Childhood+Museum+Sarajevo&amp;destination=Zuta+Tabija+Sarajevo&amp;travelmode=walking">канатка → музей → крепость</a>
+    </div>
+    <div class="note"><b>Вечером — дела перед горами (заезд в Лукомир завтра):</b> снять наличные KM в банкомате — дальше только кэш; маркет: вода, снеки, вино/ракия — в Лукомире магазинов нет вообще; подтвердить Etno-house Lukomir и квадры Travel Konjic на вс 9.08 (WhatsApp +387 61 651 045); полный бак и договориться о выезде ~9:00.</div>
   </section>
 
   <!-- DAY 4 -->
@@ -254,11 +275,11 @@ MAPSVG_PLACEHOLDER
     </div>
     <ul class="plan">
       <li><span class="tm">09:00</span><span>Выезд из Сараево, закупка на горы (вода, вино, снеки)</span></li>
-      <li><span class="tm">11:00</span><span>Умоляни: круговой хайк к меандрам Studeni potok</span></li>
+      <li><span class="tm">11:00</span><span><a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Umoljani">Умоляни</a>: круговой хайк к меандрам <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Studeni+Potok+Umoljani">Studeni potok</a></span></li>
       <li><span class="tm">12:30</span><span>Обед: пита ~5 KM, уштипцы с каймаком, свежее молоко</span></li>
       <li><span class="tm">13:30</span><span>Стечки Dolovi (ЮНЕСКО), мечеть, скала с «окаменевшим драконом»</span></li>
-      <li><span class="tm">15:00</span><span>Грейдер Умоляни → Лукомир (11 км, летом проходит легковушка)</span></li>
-      <li><span class="tm">16:00</span><span>Заселение на 2 ночи; деревня: овцы, носки у бабушек, разговоры</span></li>
+      <li><span class="tm">15:00</span><span>Грейдер Умоляни → <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Lukomir">Лукомир</a> (11 км, летом проходит легковушка)</span></li>
+      <li><span class="tm">16:00</span><span>Заселение на 2 ночи в <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Etno+House+Lukomir">Etno-house</a>; деревня: овцы, носки у бабушек, разговоры</span></li>
       <li><span class="tm">19:00</span><span>Смотровая Vidikovac: закат над каньоном. Сесть и молчать</span></li>
       <li><span class="tm">20:30</span><span>Ужин у хозяев: сыр, каймак, пита; ночью — звёзды</span></li>
     </ul>
@@ -306,9 +327,9 @@ MAPSVG_PLACEHOLDER
     </div>
     <ul class="plan">
       <li><span class="tm">07:30</span><span>Рассвет, завтрак, спуск: грейдер → M17 → Коньиц</span></li>
-      <li><span class="tm">11:00</span><span>Private quad tour Travel Konjic: 5.5 ч, 80 км, 161 € за квадр — сам за рулём, фото-стопы где хотим</span></li>
-      <li><span class="tm">16:45</span><span>Коньиц коротко: османский мост, кофе у реки</span></li>
-      <li><span class="tm">17:30</span><span>Серпантин к Борачко озеру (тупиковый заезд — автобусов не бывает)</span></li>
+      <li><span class="tm">11:00</span><span>Private quad tour <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Travel+Konjic">Travel Konjic</a>: 5.5 ч, 80 км, 161 € за квадр — сам за рулём, фото-стопы где хотим</span></li>
+      <li><span class="tm">16:45</span><span>Коньиц коротко: <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Stara+Cuprija+Konjic">османский мост</a>, кофе у реки</span></li>
+      <li><span class="tm">17:30</span><span>Серпантин к <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Boracko+Jezero">Борачко озеру</a> (тупиковый заезд — автобусов не бывает)</span></li>
       <li><span class="tm">18:10</span><span>Вечернее купание — смыть квадровую пыль</span></li>
       <li><span class="tm">20:00</span><span>Домик у воды, гриль, закат над Пренем</span></li>
     </ul>
@@ -333,7 +354,7 @@ MAPSVG_PLACEHOLDER
       <li><span class="tm free">рассвет</span><span>Зеркальная вода красит Прень — смотреть со СВОЕГО понтона с шезлонгами (он у квартиры приватный)</span></li>
       <li><span class="tm free">утро</span><span>Каяк у хозяина или лодка на базе (~10–20 KM/час); сап, если найдётся. Первый раз на сапе — именно тут. До полудня, потом ветерок</span></li>
       <li><span class="tm free">день</span><span>Купание с понтона (+24°), обход озера пешком (~час), книжка, рыба в ресторане при доме</span></li>
-      <li><span class="tm free">опция</span><span>Для непосед: 30 мин до Коньица — мастерская резьбы Никшичей (ЮНЕСКО) и кофе у османского моста; или дикие пляжи Неретвы у Глaватичево</span></li>
+      <li><span class="tm free">опция</span><span>Для непосед: 30 мин до <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Konjic">Коньица</a> — мастерская резьбы Никшичей (ЮНЕСКО) и кофе у османского моста; или дикие пляжи Неретвы у <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Glavaticevo">Глaватичево</a></span></li>
       <li><span class="tm free">вечер</span><span>Гриль, закат над водой, ракия. Вещи не собираем</span></li>
     </ul>
     <div class="note"><b>Вечером свериться:</b> время завтрашнего вылета SJJ→BEG известно, выезд с озера рассчитан; Эмир предупреждён про ранний чек-аут.</div>
@@ -347,7 +368,7 @@ MAPSVG_PLACEHOLDER
     <ul class="plan">
       <li><span class="tm">07:30</span><span>Прощальное утро: кофе на понтоне, последнее купание до ветра</span></li>
       <li><span class="tm">09:30</span><span>Завтрак, сборы, чек-аут (до 11:00 — вписываемся)</span></li>
-      <li><span class="tm">10:30</span><span>Озеро → Коньиц → аэропорт SJJ (~1.5 ч), по пути заправить бак</span></li>
+      <li><span class="tm">10:30</span><span>Озеро → Коньиц → <a class="mapl" href="https://www.google.com/maps/search/?api=1&amp;query=Sarajevo+International+Airport">аэропорт SJJ</a> (~1.5 ч), по пути заправить бак</span></li>
       <li><span class="tm">12:15</span><span>Сдача машины, регистрация, потратить остаток KM</span></li>
       <li><span class="tm">15:10</span><span>Вылет JU653 (куплено) — 16:10 в Белграде; ночёвка, домой 12.08 в 18:40</span></li>
     </ul>
@@ -386,7 +407,7 @@ MAPSVG_PLACEHOLDER
       <li>Квадры вс 9.08: Travel Konjic, WhatsApp +387 61 651 045 — private, письменное «да» про документы</li>
       <li>✅ Лукомир 7–9.08 — забронировано: Etno-house Lukomir (ресторан, верховые прогулки при доме, наличные); спросить про теферич</li>
       <li>✅ Борачко 9–11.08 — забронировано: Apartments and Rafting Boracko Lake 1 (Airbnb) — свой понтон на воде, ресторан при доме; написать хозяину про чек-ин ~18:00 и каяк</li>
-      <li>Жильё Сараево 3 ночи (парковка!); воркшоп у медника и тур осады — на чт 6.08</li>
+      <li>Жильё Сараево 3 ночи (парковка!) — прожито; воркшоп у медника и тур осады в этот заезд не случились (утро 6.08 проспано после полёта) — в копилку следующего раза</li>
     </ul>
   </div>
   <div class="pr">
@@ -404,11 +425,11 @@ MAPSVG_PLACEHOLDER
       <li>В дни перегонов водитель не дегустирует (лимит в Боснии 0.03‰); в городе машина стоит — можно всё</li>
       <li>Наличные KM — главная валюта гор: Лукомир и озеро карты не берут; банкоматов в горах нет</li>
       <li>Горы: тёплые вещи на вечер (+8–12° ночью на 1470 м), большие прогулки — до 15:00 (грозы)</li>
-      <li>Проверить еврокубковый матч ФК «Сараево» ~чт 6.08 на Кошево — если дома, вечер дня 3 под футбол</li>
+      <li>✅ Проверено 6.08: еврокубка на Кошево не будет — «Сараево» вылетело от Inter Turku ещё в июле, вечер дня 3 — город и крепость</li>
     </ul>
   </div>
 
-  <div class="foot">Собрано в июле 2026 · цены и контакты проверены на момент составления · фото: Wikimedia Commons (свободные лицензии)</div>
+  <div class="foot">Собрано в июле 2026 · обновлено 6.08 из Сараево: день 3 пересобран под поздний старт, все точки получили ссылки на Google Maps · фото: Wikimedia Commons (свободные лицензии)</div>
 </div>
 
 <script>

@@ -23,15 +23,17 @@
 ## Фактический план (подъём в ~13:45 после вчерашнего полёта)
 Утренний блок (тур осады, воркшоп) уехал — день пересобран под старт в 14:00 и закат на Žuta Tabija, как хотелось с дня 1. Вводные на сегодня: закат `20:05`, канатка до `21:00` (30 KM туда-обратно), жара ~34° внизу / ~25° на Требевиче, к вечеру возможна гроза. Футбола на Кошево нет — «Сараево» вылетело от Inter Turku ещё в июле, вечер свободен.
 
-- `14:00-14:45` обед: второй раунд чевапи-дерби — `Ferhatović` или `Petica` на Bravadžiluk (сравнить с Željo, выбрать сторону)
-- `14:45-15:15` `Казанджилук` без воркшопа (брони на сегодня нет): купить джезву у мастеров Huseinović + молотый кофе и чай домой — это последний городской день
-- `15:15-15:30` пешком в Бистрик к нижней станции канатки, наверх
-- `15:45-17:45` `Требевич`: смотровая у верхней станции + бобслейная трасса Олимпиады-84 (10–15 мин пешком, ходить прямо по жёлобу), наверху прохладно; кофе на Vidikovac
+- `14:00-14:45` обед: второй раунд чевапи-дерби — [Ferhatović](https://www.google.com/maps/search/?api=1&query=Cevabdzinica+Ferhatovic+Sarajevo) или [Petica](https://www.google.com/maps/search/?api=1&query=Petica+Ferhatovic+Sarajevo) на Bravadžiluk (сравнить с Željo, выбрать сторону)
+- `14:45-15:15` [Казанджилук](https://www.google.com/maps/search/?api=1&query=Kazandziluk+Sarajevo) без воркшопа (брони на сегодня нет): купить джезву у мастеров Huseinović + молотый кофе и чай домой — это последний городской день
+- `15:15-15:30` пешком в Бистрик к [нижней станции канатки](https://www.google.com/maps/search/?api=1&query=Sarajevo+Cable+Car), наверх
+- `15:45-17:45` `Требевич`: смотровая [Vidikovac](https://www.google.com/maps/search/?api=1&query=Vidikovac+Trebevic) + [бобслейная трасса Олимпиады-84](https://www.google.com/maps/search/?api=1&query=Sarajevo+Olympic+Bobsleigh+Track) (10–15 мин пешком, ходить прямо по жёлобу), наверху прохладно
 - `~17:50` спуск канаткой
-- `18:10-19:00` `War Childhood Museum` (Logavina 32, ~10 KM) — закрывает тему осады вместо проспанного тура; час хватает
-- `19:05-19:25` через Башчаршию и Kovači наверх к `Žuta Tabija`, по пути взять воду/пиво
-- `19:25-20:15` золотой час и закат на Жёлтой крепости (закат `20:05`, прийти минимум за полчаса — летом бортики разбирают); если совсем толпа — 10 мин выше до пустынной Bijela Tabija
-- `20:30+` ужин: вниз через Alifakovac (белые надгробия в сумерках) -> `Inat Kuća` или `Pivnica HS` с тёмным Sarajevsko; ночной бурек на Bravadžiluk
+- `18:10-19:00` [War Childhood Museum](https://www.google.com/maps/search/?api=1&query=War+Childhood+Museum+Sarajevo) (Logavina 32, ~10 KM) — закрывает тему осады вместо проспанного тура; час хватает
+- `19:05-19:25` через Башчаршию и [Kovači](https://www.google.com/maps/search/?api=1&query=Kovaci+Cemetery+Sarajevo) наверх к [Žuta Tabija](https://www.google.com/maps/search/?api=1&query=Zuta+Tabija+Sarajevo), по пути взять воду/пиво
+- `19:25-20:15` золотой час и закат на Жёлтой крепости (закат `20:05`, прийти минимум за полчаса — летом бортики разбирают); если совсем толпа — 10 мин выше до пустынной [Bijela Tabija](https://www.google.com/maps/search/?api=1&query=Bijela+Tabija+Sarajevo)
+- `20:30+` ужин: вниз через [Alifakovac](https://www.google.com/maps/search/?api=1&query=Alifakovac+Sarajevo) (белые надгробия в сумерках) -> [Inat Kuća](https://www.google.com/maps/search/?api=1&query=Inat+Kuca+Sarajevo) или [Pivnica HS](https://www.google.com/maps/search/?api=1&query=Pivnica+HS+Sarajevo) с тёмным Sarajevsko; ночной бурек на Bravadžiluk
+
+Пешие отрезки в Google Maps: [обед → медь → канатка](https://www.google.com/maps/dir/?api=1&origin=Cevabdzinica+Ferhatovic+Sarajevo&waypoints=Kazandziluk+Sarajevo&destination=Sarajevo+Cable+Car&travelmode=walking) · [станция → жёлоб](https://www.google.com/maps/dir/?api=1&origin=Vidikovac+Trebevic&destination=Sarajevo+Olympic+Bobsleigh+Track&travelmode=walking) · [канатка → музей → крепость](https://www.google.com/maps/dir/?api=1&origin=Sarajevo+Cable+Car&waypoints=War+Childhood+Museum+Sarajevo&destination=Zuta+Tabija+Sarajevo&travelmode=walking)
 - `вечером` дела перед горами — см. блок «Вечером свериться» ниже: банкомат, закупка, подтверждения броней, полный бак
 
 ## Исходный тайминг (утро проспано — оставлен для истории)
