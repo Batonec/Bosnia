@@ -40,12 +40,14 @@
 - `20:30+` ужин у хозяев: домашний сыр, каймак, пита, чай с гор. Ночью — звёзды, каких в городе не бывает
 
 ## Маршрут дня в Google Maps
-Готовый маршрут со всеми остановками (Сараево -> Babin Do -> Умоляни -> Лукомир, ~55 км):
+Один маршрут со ВСЕМИ остановками дня по порядку тайминга: Башчаршия -> Babin Do (панорамы) -> меандры Studeni potok (парковка у родника за селом) -> Koliba Umoljani (обед) -> мечеть Умоляни -> стечки Dolovi -> Etno-house Lukomir:
 
-- **[Полный маршрут: Башчаршия -> Babin Do -> Умоляни -> Лукомир](https://www.google.com/maps/dir/?api=1&origin=Ba%C5%A1%C4%8Dar%C5%A1ija%2C+Sarajevo&destination=Lukomir%2C+Bosnia+and+Herzegovina&waypoints=Babin+Do%2C+Bjela%C5%A1nica%7CUmoljani&travelmode=driving)**
-- [Тот же маршрут от текущей точки](https://www.google.com/maps/dir/?api=1&destination=Lukomir%2C+Bosnia+and+Herzegovina&waypoints=Babin+Do%2C+Bjela%C5%A1nica%7CUmoljani&travelmode=driving) — если выезжаете не с Башчаршии
+- **[Полный маршрут дня со всеми точками](https://www.google.com/maps/dir/?api=1&origin=Ba%C5%A1%C4%8Dar%C5%A1ija%2C+Sarajevo&destination=Etno+House+Lukomir&waypoints=43.7167,18.2832%7C43.670351,18.222154%7CKoliba+Umoljani%7CUmoljani+d%C5%BEamija%7C43.655,18.2392&travelmode=driving)**
+- [Тот же маршрут от текущей точки](https://www.google.com/maps/dir/?api=1&destination=Etno+House+Lukomir&waypoints=43.7167,18.2832%7C43.670351,18.222154%7CKoliba+Umoljani%7CUmoljani+d%C5%BEamija%7C43.655,18.2392&travelmode=driving) — если выезжаете не с Башчаршии
 
-Точечные пины (то, что в Умоляни и Лукомире обходится пешком, в авто-маршрут не вставлял):
+Горные точки заданы координатами, чтобы Google не гадал: Babin Do `43.7167, 18.2832`; меандры/родник `43.670351, 18.222154` (парковка у родника, дальше пешком по Studeno polje); стечки Dolovi `43.655, 18.2392` (~1.5 км от въезда в село, справа от дороги). Koliba, мечеть и Etno-house — POI самой Google. Смотровая Vidikovac в авто-маршрут не включена — туда 10 мин пешком от дома.
+
+Точечные пины на всякий случай:
 - [Меандры Studeni potok](https://www.google.com/maps/search/?api=1&query=Studeni+potok%2C+Umoljani) — инстаграм-долина, хайк из деревни
 - [Koliba Umoljani](https://www.google.com/maps/search/?api=1&query=Koliba+Umoljani) — обед, у неё же парковка
 - [Стечки некрополя Dolovi](https://www.google.com/maps/search/?api=1&query=Nekropola+ste%C4%87aka+Dolovi%2C+Umoljani) — ЮНЕСКО
