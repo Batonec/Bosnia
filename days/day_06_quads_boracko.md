@@ -28,9 +28,10 @@
 - `08:45-09:40` грейдер Лукомир -> Šabići -> [Бабин До](https://www.google.com/maps/search/?api=1&query=Babin+Do+Bjelasnica) (~50 мин, знакомая дорога в обратную сторону)
 - `09:45-10:00` [Aroma](https://maps.app.goo.gl/VnjJeRWRUBbRmkRAA): забрать велики, отдать 140 KM, надеть шлемы
 - `10:00-13:30` крутить (мотор тянет — ~30 км в удовольствие):
-  - вариант «Игман»: асфальт/лес до [Veliko polje](https://www.google.com/maps/search/?api=1&query=Veliko+Polje+Igman) — олимпийский лыжный стадион 1984 в сосняке, мягкие подъёмы, машин почти нет
-  - вариант «плато»: грейдер к [Умоляни](https://www.google.com/maps/search/?api=1&query=Umoljani) и смотровой над Studeni potok — в пятницу проезжали на машине, теперь своим ходом
-  - можно смиксовать: половину времени туда, половину сюда; батарею беречь на обратные подъёмы
+  - ОСНОВНОЙ круг «Игман + трамплины» — [готовый веломаршрут в Google Maps](https://www.google.com/maps/dir/?api=1&origin=Babin+Do+Bjelasnica&waypoints=Veliko+Polje+Igman%7CIgman+Olympic+Jumps&destination=Babin+Do+Bjelasnica&travelmode=bicycling): лесной асфальт до [Veliko polje](https://www.google.com/maps/search/?api=1&query=Veliko+Polje+Igman) (олимпийский лыжный стадион, горный дом с кофе) и дальше к [заброшенным олимпийским трамплинам Malo polje](https://www.google.com/maps/search/?api=1&query=Igman+Olympic+Jumps) — бетон-84 и граффити, жанр бобслейного жёлоба. Круг ~27–30 км, набор мягкий
+  - спорт-вариант при бодрых великах: сервисная грунтовка на [вершину Бьелашницы 2067 м](https://www.google.com/maps/dir/?api=1&origin=Babin+Do+Bjelasnica&destination=Meteoroloski+opservatorij+Bjelasnica&travelmode=bicycling) (~7 км, +800 м, наверху 360° — Прень, Трескавица, чаша Сараева); жрёт батарею
+  - плато к Умоляни после двух дней Лукомира — повтор, туда не тратить
+  - если Google скажет «велорежим недоступен» (в Боснии бывает) — переключи маршрут на «пешком»: дороги те же, время дели на три
 - `13:30-14:15` сдать велики, обед в Aroma
 - `14:15-15:30` Бабин До -> Tarčin -> M17 -> Коньиц
 - `15:30-16:10` `Коньиц` коротко: [османский мост 1682 года](https://www.google.com/maps/search/?api=1&query=Stara+Cuprija+Konjic) (маленький, красивый, без толп), мороженое/кофе у Неретвы; снять наличные на озёрные дни
