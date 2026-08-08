@@ -3,8 +3,8 @@
   <rect width="840" height="990" fill="#f7f4ec"/>
 
   <!-- ======== HEADER ======== -->
-  <text x="40" y="52" font-size="26" font-weight="700" fill="#2b2b25">Лукомир: кромка каньона + пик Obalj (1896 м)</text>
-  <text x="40" y="80" font-size="15" fill="#6b675c">СХЕМА-ОРИЕНТИРОВКА, не GPS-трек · кромка 7–8 км, 2.5–3 ч · пик +430 м, 1.5–2 ч · метки Via Dinarica</text>
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#2b2b25">Петля из Лукомира: пик Obalj → кромка каньона</text>
+  <text x="40" y="80" font-size="15" fill="#6b675c">СХЕМА-ОРИЕНТИРОВКА, не GPS-трек · малая петля 11–13 км, 4.5–5.5 ч · с обедом в Умоляни ~16 км, 6–7 ч</text>
 
   <!-- ======== MAP AREA: 40..800 x, 110..770 y ======== -->
   <g>
@@ -27,7 +27,7 @@
       <line x1="655" y1="505" x2="668" y2="512"/><line x1="666" y1="475" x2="680" y2="480"/>
     </g>
     <text x="330" y="712" font-size="17" font-weight="700" fill="#3f5c3d" letter-spacing="2">КАНЬОН РАКИТНИЦЫ</text>
-    <text x="330" y="734" font-size="13.5" fill="#4c684a">~800 м вниз · всё время СПРАВА от тропы</text>
+    <text x="330" y="734" font-size="13.5" fill="#4c684a">~800 м вниз · домой по кромке — каньон СЛЕВА</text>
 
     <!-- Studeni potok: ruchey s meandrami sverhu vniz k kanyonu -->
     <path d="M 596 262 C 588 292, 610 306, 596 330 C 582 354, 612 366, 598 390 C 584 414, 614 424, 602 448 C 594 464, 622 472, 648 486"
@@ -59,8 +59,8 @@
     <!-- POVOROT label -->
     <g>
       <rect x="620" y="486" width="176" height="52" rx="8" fill="#fff8ee" stroke="#d1495b" stroke-width="1.5"/>
-      <text x="632" y="507" font-size="13.5" font-weight="700" fill="#b03348">У ручья — НАЛЕВО,</text>
-      <text x="632" y="525" font-size="13.5" fill="#b03348">на север вверх по долине</text>
+      <text x="632" y="507" font-size="13.5" font-weight="700" fill="#b03348">У ручья: вниз = на кромку,</text>
+      <text x="632" y="525" font-size="13.5" fill="#b03348">вверх = Gradina / Умоляни</text>
     </g>
 
     <!-- Gradina -->
@@ -97,6 +97,13 @@
     <text x="676" y="232" font-size="12.5" fill="#6b675c">Koliba (пита, кофе)</text>
     <text x="676" y="247" font-size="12.5" fill="#6b675c">стечки Dolovi · мечеть</text>
 
+    <!-- nomera etapov petli -->
+    <g font-size="13" font-weight="700" text-anchor="middle">
+      <circle cx="300" cy="560" r="11" fill="#7d4fa3"/><text x="300" y="565" fill="#fff">1</text>
+      <circle cx="562" cy="348" r="11" fill="#9b7fc0"/><text x="562" y="353" fill="#fff">2</text>
+      <circle cx="392" cy="586" r="11" fill="#d1495b"/><text x="392" y="591" fill="#fff">3</text>
+    </g>
+
     <!-- kompas -->
     <g transform="translate(775 150)">
       <circle r="22" fill="#fff8ee" stroke="#c9c2b0" stroke-width="1.5"/>
@@ -130,12 +137,12 @@
       <line x1="0" y1="60" x2="46" y2="60" stroke="#7d4fa3" stroke-width="4.5" stroke-dasharray="3 7"/>
       <text x="56" y="65">подъём на пик Obalj — метки хребта</text>
       <line x1="470" y1="60" x2="516" y2="60" stroke="#b39ac9" stroke-width="3" stroke-dasharray="2 6"/>
-      <text x="526" y="65">спуск хребтом в Умоляни (вариант)</text>
+      <text x="526" y="65">спуск с хребта — к ручью или в Умоляни</text>
     </g>
     <g transform="translate(0 88)">
       <rect x="0" y="0" width="760" height="66" rx="10" fill="#fdeeea" stroke="#d1495b" stroke-width="1.5"/>
-      <text x="16" y="26" font-size="14.5" font-weight="700" fill="#b03348">Правила: каньон всегда СПРАВА · кромка — разворот в 13:00 · хребет — вниз к 14:00 ·</text>
-      <text x="16" y="48" font-size="14.5" font-weight="700" fill="#b03348">гром или чёрная туча → с кромки на север к грейдеру, с хребта сразу вниз</text>
+      <text x="16" y="26" font-size="14.5" font-weight="700" fill="#b03348">Петля: ① на пик ② вниз к ручью (или обед в Умоляни) ③ кромкой домой, каньон СЛЕВА</text>
+      <text x="16" y="48" font-size="14.5" font-weight="700" fill="#b03348">на пике в ~12:30 смотрим небо: тучи растут → назад тем же путём · гром → сразу вниз</text>
     </g>
   </g>
 </svg>
