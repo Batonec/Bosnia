@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 960" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 990" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
   <!-- fon -->
-  <rect width="840" height="960" fill="#f7f4ec"/>
+  <rect width="840" height="990" fill="#f7f4ec"/>
 
   <!-- ======== HEADER ======== -->
-  <text x="40" y="52" font-size="26" font-weight="700" fill="#2b2b25">Лукомир → Умоляни по кромке каньона</text>
-  <text x="40" y="80" font-size="15" fill="#6b675c">СХЕМА-ОРИЕНТИРОВКА, не GPS-трек · 7–8 км · 2.5–3 ч в одну сторону · бело-красные метки Via Dinarica</text>
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#2b2b25">Лукомир: кромка каньона + пик Obalj (1896 м)</text>
+  <text x="40" y="80" font-size="15" fill="#6b675c">СХЕМА-ОРИЕНТИРОВКА, не GPS-трек · кромка 7–8 км, 2.5–3 ч · пик +430 м, 1.5–2 ч · метки Via Dinarica</text>
 
   <!-- ======== MAP AREA: 40..800 x, 110..770 y ======== -->
   <g>
@@ -32,8 +32,8 @@
     <!-- Studeni potok: ruchey s meandrami sverhu vniz k kanyonu -->
     <path d="M 596 262 C 588 292, 610 306, 596 330 C 582 354, 612 366, 598 390 C 584 414, 614 424, 602 448 C 594 464, 622 472, 648 486"
           fill="none" stroke="#4a90c2" stroke-width="3" stroke-linecap="round"/>
-    <text x="470" y="380" font-size="13.5" fill="#33689c" font-style="italic">Studeni potok</text>
-    <text x="470" y="397" font-size="12.5" fill="#33689c">(меандры)</text>
+    <text x="516" y="462" font-size="13.5" fill="#33689c" font-style="italic">Studeni potok</text>
+    <text x="516" y="478" font-size="12.5" fill="#33689c">(меандры)</text>
 
     <!-- greyder (doroga) severnoy dugoy -->
     <path d="M 172 636 C 130 560, 140 470, 200 400 C 270 318, 380 262, 470 240 C 530 226, 570 222, 610 224"
@@ -65,12 +65,21 @@
 
     <!-- Gradina -->
     <circle cx="600" cy="258" r="5" fill="#7a6f4e"/>
-    <text x="466" y="284" font-size="13.5" fill="#6b6146">пастбища <tspan font-weight="700">Gradina</tspan></text>
+    <text x="442" y="284" font-size="13.5" fill="#6b6146">пастбища <tspan font-weight="700">Gradina</tspan></text>
+
+    <!-- podyom na Obalj (pik dnya) -->
+    <path d="M 180 650 C 248 600, 305 520, 368 458 C 398 430, 418 423, 432 421"
+          fill="none" stroke="#7d4fa3" stroke-width="4.5" stroke-dasharray="3 7" stroke-linecap="round"/>
+    <g transform="translate(312 512) rotate(-40)"><path d="M 0 0 l -16 -2 l 10 12 z" fill="#7d4fa3"/></g>
+    <text x="248" y="572" font-size="13" font-weight="700" fill="#6a3f8f" transform="rotate(-46 248 572)">на пик 1.5–2 ч</text>
+    <!-- spusk hrebtom k Gradine (variant) -->
+    <path d="M 452 408 C 500 370, 545 330, 596 266"
+          fill="none" stroke="#b39ac9" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
 
     <!-- Obalj -->
-    <path d="M 432 424 l 13 -22 l 13 22 z" fill="none" stroke="#6b675c" stroke-width="2.5"/>
-    <text x="404" y="448" font-size="13.5" fill="#6b675c"><tspan font-weight="700">Obalj</tspan> 1896 м</text>
-    <text x="404" y="464" font-size="12" fill="#8a8577">(верхний вариант по хребту)</text>
+    <path d="M 432 424 l 13 -22 l 13 22 z" fill="#f3ecf9" stroke="#7d4fa3" stroke-width="3"/>
+    <text x="474" y="418" font-size="14" fill="#5e3a80"><tspan font-weight="700">Obalj</tspan> 1896 м — ПИК ДНЯ</text>
+    <text x="474" y="434" font-size="12" fill="#8a6fae">360°: каньон, Височица, купол Бьелашницы</text>
 
     <!-- skala Drakona -->
     <text x="668" y="330" font-size="13" fill="#6b675c">⛰ «скала Дракона» —</text>
@@ -78,9 +87,9 @@
 
     <!-- LUKOMIR -->
     <circle cx="180" cy="650" r="9" fill="#d1495b" stroke="#fff" stroke-width="2.5"/>
-    <text x="82" y="586" font-size="17" font-weight="700" fill="#2b2b25">ЛУКОМИР</text>
-    <text x="82" y="604" font-size="12.5" fill="#6b675c">1470 м · старт: за последние</text>
-    <text x="82" y="619" font-size="12.5" fill="#6b675c">дома на ВОСТОК, вдоль обрыва</text>
+    <text x="56" y="544" font-size="17" font-weight="700" fill="#2b2b25">ЛУКОМИР</text>
+    <text x="56" y="562" font-size="12.5" fill="#6b675c">1470 м · кромка — на ВОСТОК,</text>
+    <text x="56" y="577" font-size="12.5" fill="#6b675c">пик — метки ВЛЕВО ВВЕРХ</text>
 
     <!-- UMOLYANI -->
     <circle cx="656" cy="220" r="9" fill="#2f6f4f" stroke="#fff" stroke-width="2.5"/>
@@ -118,11 +127,15 @@
       <text x="526" y="5">ручей Studeni potok</text>
       <rect x="470" y="24" width="46" height="12" fill="#b7cdae" opacity="0.75" stroke="#4a6b48"/>
       <text x="526" y="35">каньон (не подходить в грозу)</text>
+      <line x1="0" y1="60" x2="46" y2="60" stroke="#7d4fa3" stroke-width="4.5" stroke-dasharray="3 7"/>
+      <text x="56" y="65">подъём на пик Obalj — метки хребта</text>
+      <line x1="470" y1="60" x2="516" y2="60" stroke="#b39ac9" stroke-width="3" stroke-dasharray="2 6"/>
+      <text x="526" y="65">спуск хребтом в Умоляни (вариант)</text>
     </g>
-    <g transform="translate(0 58)">
+    <g transform="translate(0 88)">
       <rect x="0" y="0" width="760" height="66" rx="10" fill="#fdeeea" stroke="#d1495b" stroke-width="1.5"/>
-      <text x="16" y="26" font-size="14.5" font-weight="700" fill="#b03348">Правила дня:  каньон всегда СПРАВА · туда-обратно → разворот в 13:00 ·</text>
-      <text x="16" y="48" font-size="14.5" font-weight="700" fill="#b03348">гром или чёрная туча → сразу ВЛЕВО (на север) от кромки, к грейдеру</text>
+      <text x="16" y="26" font-size="14.5" font-weight="700" fill="#b03348">Правила: каньон всегда СПРАВА · кромка — разворот в 13:00 · хребет — вниз к 14:00 ·</text>
+      <text x="16" y="48" font-size="14.5" font-weight="700" fill="#b03348">гром или чёрная туча → с кромки на север к грейдеру, с хребта сразу вниз</text>
     </g>
   </g>
 </svg>
