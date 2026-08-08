@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 960" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <!-- fon -->
+  <rect width="840" height="960" fill="#f7f4ec"/>
+
+  <!-- ======== HEADER ======== -->
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#2b2b25">Лукомир → Умоляни по кромке каньона</text>
+  <text x="40" y="80" font-size="15" fill="#6b675c">СХЕМА-ОРИЕНТИРОВКА, не GPS-трек · 7–8 км · 2.5–3 ч в одну сторону · бело-красные метки Via Dinarica</text>
+
+  <!-- ======== MAP AREA: 40..800 x, 110..770 y ======== -->
+  <g>
+    <!-- ramka -->
+    <rect x="40" y="110" width="760" height="660" fill="#efe9db" stroke="#c9c2b0" stroke-width="1.5" rx="6"/>
+
+    <!-- kanyon Rakitnicy: banda vdol' yuga -->
+    <path d="M 60 745 C 160 700, 250 668, 380 640 C 500 615, 590 585, 640 530 C 660 505, 668 480, 672 460 L 740 505 C 730 545, 700 600, 620 650 C 520 705, 380 730, 250 750 L 60 762 Z"
+          fill="#b7cdae" opacity="0.75"/>
+    <!-- kromka (rim edge) -->
+    <path d="M 60 745 C 160 700, 250 668, 380 640 C 500 615, 590 585, 640 530 C 660 505, 668 480, 672 460"
+          fill="none" stroke="#4a6b48" stroke-width="3"/>
+    <!-- shtrihi obryva -->
+    <g stroke="#5c7d5a" stroke-width="1.6" opacity="0.85">
+      <line x1="120" y1="726" x2="128" y2="742"/><line x1="180" y1="705" x2="188" y2="721"/>
+      <line x1="240" y1="688" x2="248" y2="704"/><line x1="300" y1="672" x2="308" y2="688"/>
+      <line x1="360" y1="658" x2="368" y2="674"/><line x1="420" y1="644" x2="428" y2="660"/>
+      <line x1="480" y1="628" x2="488" y2="644"/><line x1="540" y1="608" x2="548" y2="624"/>
+      <line x1="590" y1="580" x2="600" y2="594"/><line x1="630" y1="545" x2="642" y2="556"/>
+      <line x1="655" y1="505" x2="668" y2="512"/><line x1="666" y1="475" x2="680" y2="480"/>
+    </g>
+    <text x="330" y="712" font-size="17" font-weight="700" fill="#3f5c3d" letter-spacing="2">КАНЬОН РАКИТНИЦЫ</text>
+    <text x="330" y="734" font-size="13.5" fill="#4c684a">~800 м вниз · всё время СПРАВА от тропы</text>
+
+    <!-- Studeni potok: ruchey s meandrami sverhu vniz k kanyonu -->
+    <path d="M 596 262 C 588 292, 610 306, 596 330 C 582 354, 612 366, 598 390 C 584 414, 614 424, 602 448 C 594 464, 622 472, 648 486"
+          fill="none" stroke="#4a90c2" stroke-width="3" stroke-linecap="round"/>
+    <text x="470" y="380" font-size="13.5" fill="#33689c" font-style="italic">Studeni potok</text>
+    <text x="470" y="397" font-size="12.5" fill="#33689c">(меандры)</text>
+
+    <!-- greyder (doroga) severnoy dugoy -->
+    <path d="M 172 636 C 130 560, 140 470, 200 400 C 270 318, 380 262, 470 240 C 530 226, 570 222, 610 224"
+          fill="none" stroke="#8d8578" stroke-width="4" stroke-dasharray="14 5"/>
+    <text x="150" y="430" font-size="13.5" fill="#7a7266" transform="rotate(-52 150 430)">грейдер 11–16 км (машина / запасной пеший)</text>
+
+    <!-- TROPA po kromke (krasny punktir) -->
+    <path d="M 180 650 C 250 640, 330 626, 420 606 C 510 586, 570 560, 620 512 C 646 486, 656 470, 660 458"
+          fill="none" stroke="#d1495b" stroke-width="4.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+    <!-- povorot NALEVO vverh po ruchyu -->
+    <path d="M 660 458 C 640 430, 630 404, 622 380 C 612 350, 606 320, 606 292 C 606 278, 608 266, 612 254"
+          fill="none" stroke="#d1495b" stroke-width="4.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+    <!-- spusk s Gradiny v Umolyani -->
+    <path d="M 612 254 C 622 240, 636 230, 650 224"
+          fill="none" stroke="#d1495b" stroke-width="4.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+    <!-- strelki napravleniya -->
+    <g fill="#d1495b">
+      <path d="M 420 606 l -16 -2 l 10 12 z"/>
+      <path d="M 620 512 l -14 6 l 14 8 z" transform="rotate(28 620 512)"/>
+      <path d="M 622 380 l -10 12 l 16 2 z"/>
+    </g>
+
+    <!-- POVOROT label -->
+    <g>
+      <rect x="620" y="486" width="176" height="52" rx="8" fill="#fff8ee" stroke="#d1495b" stroke-width="1.5"/>
+      <text x="632" y="507" font-size="13.5" font-weight="700" fill="#b03348">У ручья — НАЛЕВО,</text>
+      <text x="632" y="525" font-size="13.5" fill="#b03348">на север вверх по долине</text>
+    </g>
+
+    <!-- Gradina -->
+    <circle cx="600" cy="258" r="5" fill="#7a6f4e"/>
+    <text x="466" y="284" font-size="13.5" fill="#6b6146">пастбища <tspan font-weight="700">Gradina</tspan></text>
+
+    <!-- Obalj -->
+    <path d="M 432 424 l 13 -22 l 13 22 z" fill="none" stroke="#6b675c" stroke-width="2.5"/>
+    <text x="404" y="448" font-size="13.5" fill="#6b675c"><tspan font-weight="700">Obalj</tspan> 1896 м</text>
+    <text x="404" y="464" font-size="12" fill="#8a8577">(верхний вариант по хребту)</text>
+
+    <!-- skala Drakona -->
+    <text x="668" y="330" font-size="13" fill="#6b675c">⛰ «скала Дракона» —</text>
+    <text x="668" y="346" font-size="12.5" fill="#8a8577">силуэт на утёсе над ручьём</text>
+
+    <!-- LUKOMIR -->
+    <circle cx="180" cy="650" r="9" fill="#d1495b" stroke="#fff" stroke-width="2.5"/>
+    <text x="82" y="586" font-size="17" font-weight="700" fill="#2b2b25">ЛУКОМИР</text>
+    <text x="82" y="604" font-size="12.5" fill="#6b675c">1470 м · старт: за последние</text>
+    <text x="82" y="619" font-size="12.5" fill="#6b675c">дома на ВОСТОК, вдоль обрыва</text>
+
+    <!-- UMOLYANI -->
+    <circle cx="656" cy="220" r="9" fill="#2f6f4f" stroke="#fff" stroke-width="2.5"/>
+    <text x="676" y="214" font-size="17" font-weight="700" fill="#2b2b25">УМОЛЯНИ</text>
+    <text x="676" y="232" font-size="12.5" fill="#6b675c">Koliba (пита, кофе)</text>
+    <text x="676" y="247" font-size="12.5" fill="#6b675c">стечки Dolovi · мечеть</text>
+
+    <!-- kompas -->
+    <g transform="translate(775 150)">
+      <circle r="22" fill="#fff8ee" stroke="#c9c2b0" stroke-width="1.5"/>
+      <path d="M 0 -14 L 5 8 L 0 4 L -5 8 Z" fill="#d1495b"/>
+      <text x="0" y="-28" font-size="14" font-weight="700" fill="#2b2b25" text-anchor="middle">С</text>
+    </g>
+
+    <!-- masshtab: 2 km ≈ 236 px (760px = 6.4 km) -->
+    <g transform="translate(60 150)">
+      <line x1="0" y1="0" x2="236" y2="0" stroke="#2b2b25" stroke-width="3"/>
+      <line x1="0" y1="-6" x2="0" y2="6" stroke="#2b2b25" stroke-width="2.5"/>
+      <line x1="118" y1="-5" x2="118" y2="5" stroke="#2b2b25" stroke-width="2"/>
+      <line x1="236" y1="-6" x2="236" y2="6" stroke="#2b2b25" stroke-width="2.5"/>
+      <text x="0" y="22" font-size="12.5" fill="#2b2b25">0</text>
+      <text x="110" y="22" font-size="12.5" fill="#2b2b25">1 км</text>
+      <text x="226" y="22" font-size="12.5" fill="#2b2b25">2 км</text>
+    </g>
+  </g>
+
+  <!-- ======== LEGEND + RULES ======== -->
+  <g transform="translate(40 800)">
+    <g font-size="14" fill="#2b2b25">
+      <line x1="0" y1="0" x2="46" y2="0" stroke="#d1495b" stroke-width="4.5" stroke-dasharray="10 7"/>
+      <text x="56" y="5">тропа по кромке — примерно! идти по меткам</text>
+      <line x1="0" y1="30" x2="46" y2="30" stroke="#8d8578" stroke-width="4" stroke-dasharray="14 5"/>
+      <text x="56" y="35">грейдер — запасной путь и эвакуация</text>
+      <line x1="470" y1="0" x2="516" y2="0" stroke="#4a90c2" stroke-width="3"/>
+      <text x="526" y="5">ручей Studeni potok</text>
+      <rect x="470" y="24" width="46" height="12" fill="#b7cdae" opacity="0.75" stroke="#4a6b48"/>
+      <text x="526" y="35">каньон (не подходить в грозу)</text>
+    </g>
+    <g transform="translate(0 58)">
+      <rect x="0" y="0" width="760" height="66" rx="10" fill="#fdeeea" stroke="#d1495b" stroke-width="1.5"/>
+      <text x="16" y="26" font-size="14.5" font-weight="700" fill="#b03348">Правила дня:  каньон всегда СПРАВА · туда-обратно → разворот в 13:00 ·</text>
+      <text x="16" y="48" font-size="14.5" font-weight="700" fill="#b03348">гром или чёрная туча → сразу ВЛЕВО (на север) от кромки, к грейдеру</text>
+    </g>
+  </g>
+</svg>
