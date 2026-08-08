@@ -39,3 +39,9 @@
 - С пика: весь каньон сверху, Височица, Трескавица, главный купол Бьелашницы, меандры Studeni potok, обе деревни
 - ⚠️ В Google Maps «Obalj» может найтись НЕ ТОТ (есть село Obalj у Калиновика) — ориентироваться по Organic Maps и меткам
 - Грозовой дедлайн: с хребта не позже 14:00
+
+## Петля в Google Maps (что он реально умеет)
+- Пики и тропы петли в Google отсутствуют — верхняя часть только по меткам/Organic Maps. «Obalj» в Google НЕ искать (найдётся село у Калиновика и пик 1306 м — оба не те)
+- Пины-чекпоинты (открыть и «Сохранить» звёздочкой — видны офлайн): [Лукомир 43.6373,18.1831](https://www.google.com/maps/search/?api=1&query=43.6373%2C18.1831) · [Умоляни 43.6702,18.2279](https://www.google.com/maps/search/?api=1&query=43.6702%2C18.2279) · [Koliba Umoljani](https://www.google.com/maps/search/?api=1&query=Koliba+Umoljani) · [Vidikovac](https://www.google.com/maps/search/?api=1&query=Vidikovac+Lukomir)
+- Запасной навигируемый путь (грейдер, Google его знает): [Umoljani → Lukomir пешком](https://www.google.com/maps/dir/?api=1&origin=Umoljani&destination=Lukomir%2C+Bosnia+and+Herzegovina&travelmode=walking)
+- Скачать офлайн-область Google Maps на район Бьелашницы (Профиль → Offline maps), пока есть связь
