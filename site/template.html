@@ -123,6 +123,9 @@
   .dcard.past .n::after{content:" · было";}
   .dcard.today{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset;}
   .dcard.today .n{color:var(--accent); font-weight:700;}
+  .dcard.today .n::after{content:" · сегодня";}
+  .day.past .eyebrow::after{content:" · было";}
+  .day.today .eyebrow::after{content:" · сегодня";}
 
   .note{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--copper);
     border-radius:10px; padding:12px 16px; margin-top:18px; font-size:14px;}
@@ -152,25 +155,25 @@
   <h2>Маршрут по дням</h2>
   <p class="sub">Клик по карточке ведёт к полному дню. Пиктограммы: машина — часы за рулём, самолёт — перелёт.</p>
   <div class="grid">
-    <a class="dcard past" href="#cal"><div class="head"><span class="n">пт 31.07</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> VKO 06:10 → BEG 15:55</span></span></div>
+    <a class="dcard" data-d="2026-07-31" href="#cal"><div class="head"><span class="n">пт 31.07</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> VKO 06:10 → BEG 15:55</span></span></div>
       <div class="t">Перелёт Москва → Белград</div></a>
-    <a class="dcard past" href="#cal"><div class="head"><span class="n">сб–пн · 1–3.08</span></div>
+    <a class="dcard" data-d="2026-08-03" href="#cal"><div class="head"><span class="n">сб–пн · 1–3.08</span></div>
       <div class="t">Воссоединение с Белградом</div></a>
-    <a class="dcard past" href="#d1"><div class="head"><span class="n">вт 4.08</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> JU652 · 13:40 → 14:40</span></span></div>
+    <a class="dcard" data-d="2026-08-04" href="#d1"><div class="head"><span class="n">вт 4.08</span><span class="tags"><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> JU652 · 13:40 → 14:40</span></span></div>
       <div class="t">Перелёт в Сараево, первый вечер</div></a>
-    <a class="dcard past" href="#d2"><div class="head"><span class="n">ср 5.08</span></div>
+    <a class="dcard" data-d="2026-08-05" href="#d2"><div class="head"><span class="n">ср 5.08</span></div>
       <div class="t">Параглайдинг над Сараево</div></a>
-    <a class="dcard today" href="#d3"><div class="head"><span class="n">чт 6.08 · сегодня</span></div>
+    <a class="dcard" data-d="2026-08-06" href="#d3"><div class="head"><span class="n">чт 6.08</span></div>
       <div class="t">Сараево full day: канатка, бобслей, закат на крепости</div></a>
-    <a class="dcard" href="#d4"><div class="head"><span class="n">пт 7.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 2 ч</span></span></div>
+    <a class="dcard" data-d="2026-08-07" href="#d4"><div class="head"><span class="n">пт 7.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 2 ч</span></span></div>
       <div class="t">В Лукомир — через плато и Умоляни</div></a>
-    <a class="dcard" href="#d5"><div class="head"><span class="n">сб 8.08</span></div>
+    <a class="dcard" data-d="2026-08-08" href="#d5"><div class="head"><span class="n">сб 8.08</span></div>
       <div class="t">Лукомир: кенийский день</div></a>
-    <a class="dcard" href="#d6"><div class="head"><span class="n">вс 9.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 2.5 ч</span></span></div>
+    <a class="dcard" data-d="2026-08-09" href="#d6"><div class="head"><span class="n">вс 9.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 2.5 ч</span></span></div>
       <div class="t">E-bikes на Бьелашнице</div></a>
-    <a class="dcard" href="#d7"><div class="head"><span class="n">пн 10.08</span></div>
+    <a class="dcard" data-d="2026-08-10" href="#d7"><div class="head"><span class="n">пн 10.08</span></div>
       <div class="t">Озеро Борачко</div></a>
-    <a class="dcard" href="#d8"><div class="head"><span class="n">вт 11.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 1.5 ч</span><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> JU653 · 15:10 → 16:10</span></span></div>
+    <a class="dcard" data-d="2026-08-11" href="#d8"><div class="head"><span class="n">вт 11.08</span><span class="tags"><span class="tag drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.3-3.4A2 2 0 0 1 8.2 6h7.6a2 2 0 0 1 1.9 1.6L19 11M5 11h14a2 2 0 0 1 2 2v3h-2.4M5 11H3v5h2.4m4 0h5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.6" cy="16.5" r="1.9" fill="none" stroke="currentColor" stroke-width="2"/></svg> 1.5 ч</span><span class="tag fly"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg> JU653 · 15:10 → 16:10</span></span></div>
       <div class="t">Прощальное утро на озере → Белград</div></a>
   </div>
 
@@ -181,8 +184,8 @@ MAPSVG_PLACEHOLDER
   </div>
 
   <!-- DAY 1 -->
-  <section class="day" id="d1">
-    <div class="eyebrow">вт 4.08 · прилёт · было</div>
+  <section class="day" id="d1" data-d="2026-08-04">
+    <div class="eyebrow">вт 4.08 · прилёт</div>
     <h3>Перелёт Белград → Сараево, первый вечер города</h3>
     <p class="lede">JU652, 13:40–14:40, час лёту — и другой мир: минареты, медь, горы со всех сторон. Взять машину в аэропорту, заселиться и войти в город мягко: кофе у Латинского моста, Башчаршия, закат на Жёлтой крепости. <em>До этого — с 31.07 чилл в Белграде.</em></p>
     <div class="car" data-car>
@@ -206,8 +209,8 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 2 -->
-  <section class="day" id="d2">
-    <div class="eyebrow">ср 5.08 · первый экшен · было — полёт состоялся</div>
+  <section class="day" id="d2" data-d="2026-08-05">
+    <div class="eyebrow">ср 5.08 · первый экшен — полёт состоялся</div>
     <h3>Город с утра → вечерний параглайдинг</h3>
     <p class="lede">Утро без спешки — кофе-ритуал, живой рынок Маркале, обед «как местные» в ашчинице. Вечером главная история: полёт в тандеме над чашей сараевских гор в золотом свете. <em>Следующий день — погодный резерв полёта.</em></p>
     <figure class="solo"><img src="{{panorama}}" alt="Панорама Сараево"><figcaption>Город в чаше гор — вот над этим ты будешь лететь вечером</figcaption></figure>
@@ -223,8 +226,8 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 3 -->
-  <section class="day" id="d3">
-    <div class="eyebrow">чт 6.08 · сегодня · пересобран под подъём в 14:00</div>
+  <section class="day" id="d3" data-d="2026-08-06">
+    <div class="eyebrow">чт 6.08 · город глубоко (пересобран под подъём в 14:00)</div>
     <h3>Канатка, бобслей-84, военное детство — и закат на Жёлтой крепости</h3>
     <p class="lede">После вчерашнего полёта утро честно проспано — тур осады и воркшоп уехали в копилку следующего раза. День собран вокруг того, чего ты ещё не видел: прохладный Требевич с олимпийским жёлобом, один сильный музей — и закатный финал на Žuta Tabija, как хотелось с первого вечера. <em>Вводные дня: закат 20:05 · канатка до 21:00, 30 KM туда-обратно · внизу ~34°, наверху ~25° · к вечеру возможна гроза — следить за небом. Футбола на Кошево нет: «Сараево» вылетело ещё в июле.</em></p>
     <div class="car" data-car>
@@ -257,7 +260,7 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 4 -->
-  <section class="day" id="d4">
+  <section class="day" id="d4" data-d="2026-08-07">
     <div class="eyebrow">пт 7.08 · в горы</div>
     <h3>Плато Бьелашницы → Умоляни → ночь в Лукомире</h3>
     <p class="lede">Самый короткий переезд поездки (~2 часа руля, размазанные на день) и самая аутентичная точка: Лукомир, 1470 м — каменные дома, пастухи, овцы. Вечером — закат над каньоном Ракитницы глубиной 800 метров.</p>
@@ -287,7 +290,7 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 5 -->
-  <section class="day" id="d5">
+  <section class="day" id="d5" data-d="2026-08-08">
     <div class="eyebrow">сб 8.08 · медитативный</div>
     <h3>«Кенийский» день на кромке каньона</h3>
     <p class="lede">Единственный день без руля, чемоданов и брони по часам. Тропа вдоль кромки, плед, книжка, пастуший перекус над 800-метровым обрывом. Единица измерения дня — не километры, а часы тишины.</p>
@@ -311,7 +314,7 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 6 -->
-  <section class="day" id="d6">
+  <section class="day" id="d6" data-d="2026-08-09">
     <div class="eyebrow">вс 9.08 · главный экшен · теперь на педалях</div>
     <h3>Лукомир → e-bikes на Бьелашнице → Борачко озеро</h3>
     <p class="lede">Квадры отменились — вместо них два e-bike с Бабин До (бронь подтверждена почтой: 140 KM за оба, шлемы включены). Та же свобода «сам рулишь по горам», только тише: 3,5 часа по олимпийским дорогам Бьелашницы и Игмана. Потом обед — и вниз, к ледниковому озеру: заселение на две ночи в квартиру с собственным понтоном на воде (забронировано).</p>
@@ -343,7 +346,7 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 7 -->
-  <section class="day" id="d7">
+  <section class="day" id="d7" data-d="2026-08-10">
     <div class="eyebrow">пн 10.08 · вода</div>
     <h3>Полный день на Борачко озере</h3>
     <p class="lede">Второй «нулевой» день поездки: ни руля, ни чемоданов, ни брони по часам. Понедельник — выходные местные уехали, озеро практически ваше: лодка и сап по зеркальной воде, купание, гриль, Прень над головой.</p>
@@ -367,7 +370,7 @@ MAPSVG_PLACEHOLDER
   </section>
 
   <!-- DAY 8 -->
-  <section class="day" id="d8">
+  <section class="day" id="d8" data-d="2026-08-11">
     <div class="eyebrow">вт 11.08 · финал</div>
     <h3>Прощальное утро на озере → аэропорт → Белград</h3>
     <p class="lede">Никакой программы: кофе на своём понтоне, последнее купание в зеркальной воде — и спокойный вылет. Рейс подтверждён билетом: JU653 в 15:10. <em>Бункер и весь юг Герцеговины — осознанно отложены на следующий трип.</em></p>
@@ -435,10 +438,19 @@ MAPSVG_PLACEHOLDER
     </ul>
   </div>
 
-  <div class="foot">Собрано в июле 2026 · обновлено 6.08 из Сараево: день 3 пересобран под поздний старт, день 6 переведён с квадров на e-bikes, все точки — со ссылками на Google Maps · фото: Wikimedia Commons (свободные лицензии)</div>
+  <div class="foot">Собрано в июле 2026 · живой план: отметки «было/сегодня» считаются сами по дате на устройстве · в поездке пересобраны день 3 (поздний старт) и день 6 (e-bikes вместо квадров), все точки — со ссылками на Google Maps · фото: Wikimedia Commons (свободные лицензии)</div>
 </div>
 
 <script>
+(function(){
+  var n = new Date();
+  var today = n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0');
+  document.querySelectorAll('[data-d]').forEach(function(el){
+    var d = el.getAttribute('data-d');
+    if (d < today) el.classList.add('past');
+    else if (d === today) el.classList.add('today');
+  });
+})();
 document.querySelectorAll('[data-car]').forEach(function(car){
   var track = car.querySelector('.track');
   var slides = car.querySelectorAll('figure');
